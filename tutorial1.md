@@ -161,7 +161,7 @@ So far, we’ve been seeing a “normal” map of the world in WGS84, which is t
 
 There’s a slight problem with projection systems! The earth’s surface is curved and not a perfect sphere, introducing elements of distortion. Coordinate reference systems are only approximations, and there are some trade offs to be made between preserving shape, distances, relative sizes or directions. 
 
-Please take a few minutes to read about projection systems [here](https://www.leventhalmap.org/digital-exhibitions/bending-lines/how-to-bend/projections/). Use the interactive projections tool to check out different distortions. 
+Please take a few minutes to read about projection systems [here](https://www.leventhalmap.org/digital-exhibitions/bending-lines/how-to-bend/projections/). Use the interactive projections tool to check out different distortions. WGS 84 is a Mercator projection, it looks like this. 
 
 ![Image 18](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/18-Tutorial-1.png)
 
@@ -169,27 +169,27 @@ Click on others including: Robinson, Sinusoidal, Mollweide, Bonne. We’ll explo
 
 Before we start retrojecting our data, let’s add some grid lines. 
 
-Go to Vector > Research Tools > Create Grid
+Go to **Vector > Research Tools > Create Grid**
 
 ![Image 19](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/19-Tutorial-1.png)
 
-Set the parameters of your grid. Change the Grid type to Line, Horizontal/Vertical spacing to 15 degrees, and identify the Grid extent to Calculate from Layer > Countries GDP/Capita. Then press run. This is basically creating a new vector file, with line attributes, and adding it to your Layers panel and browser panel
+Set the parameters of your grid. Change the **Grid type** to Line, **Horizontal/Vertical spacing** to 15 degrees, and identify the Grid extent to **Calculate from Layer > Countries GDP/Capita**. Then press run. This is basically creating a new vector file, with line attributes, and adding it to your **Layers panel** and **Browser panel**.
 
 ![Image 20](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/20-Tutorial-1.png)
 
-Another quick step. Go to Vector > Geometry Tools > Densify By Count. Make sure the input layer is your grid. Change the number of vertices to 50, and run it. 
+Another quick step. Go to **Vector > Geometry Tools > Densify By Count**. Make sure the input layer is your grid. Change the **Number of vertices** to 50, and run it. 
 
-Great, now delete the grid layer by right clicking it > remove layer. The Densified layer is still temporary, if you close your project and open it again, it will disappear. First lets save the densified  data. Click on the temporary icon on the layer in the layers panel. Always save your files as .geoJSON which is the most efficient type, and will compress your data in 1 file (instead of 7, like the .sph shapefile format). Give your layer a location and title by clicking the […] icon and press ok. 
+Great, now delete the grid layer by right clicking it > remove layer. The Densified layer is still temporary, if you close your project and open it again, it will disappear. First lets save the densified  data. Click on the temporary icon on the layer in the layers panel. Always save your files as `.geoJSON` which is the most efficient type, and will compress your data in 1 file (instead of 7, like the `.sph` shapefile format). Give your layer a location and title by clicking the […] icon and press ok. 
 
 ![Image 21](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/21-Tutorial-1.png)
 
-Now you can also style your line by right clicking in the layers panel > Properties > Symbology. 
+Now you can also style your line by right clicking in the **Layers panel > Properties > Symbology.**
 
-Once you’re done, we’ll head to change the projections. Click on the bottom right corner, as indicated below. 
+Once you’re done, we’ll head to change the **Projections.** Click on the bottom right corner, as indicated below. 
 
 ![Image 22](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/22-Tutorial-1.png)
 
-There are over 7000 projections in QGIS. Each is identified by a unique Authority ID. Try some projections. To make it simple, here are a few codes you might want to type into the filter (make sure to click them once the option appears):
+There are over 7000 projections in QGIS. Each is identified by a unique **Authority ID.** Try some projections. To make it simple, here are a few codes you might want to type into the filter (make sure to click them once the option appears):
 
 Robinson: ESRI:53030
 Sinusoidal: ESRI:53008
