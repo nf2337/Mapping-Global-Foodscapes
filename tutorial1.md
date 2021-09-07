@@ -196,6 +196,6 @@ Sinusoidal: ESRI:53008
 Mollweide: ESRI:53009
 Bonne: ESRI:53024
 
-Once you’ve experimented and you’re satisfied with a projection, close the window. Now we’re ready to export the map. We’ll cover that next tutorial, where we’ll learn to include a title, legend and scale bar. For now, take a screenshot of your Map Canvas. From your desktop, rename the file: LASTNAME_Tutorial_1 and upload it to the Tutorial 1 > Output folder. 
+Once you’ve experimented and you’re satisfied with a projection, close the window. Now we’re ready to export the map. We’ll cover that next tutorial, where we’ll learn to include a title, legend and scale bar. For now, take a screenshot of your Map Canvas. From your desktop, rename the file: LASTNAME_Tutorial_1 and upload it to the Tutorial 1 > [Output folder](https://drive.google.com/drive/folders/1gjJ8gSQffUpwS04EsPZkwrzP9fsaN6Zi). 
 
 See you next time!! 
