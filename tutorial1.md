@@ -13,6 +13,10 @@ First, you will need to download QGIS. The tutorials are written in version 3.20
 
 GIS projects and files can be confusing, as you will soon learn! Please set up a GIS folder on your desktop with a subfolder for each tutorial, and keen your files well-ordered and clean!
 
+### QGIS Project File
+
+As soon as you open GIS, you should go to **Project>New**, **save** it in a designated folder. This will create a `.qgz` file, where your project is located. Note this is not the final map you are producing, and you will always need to export your maps as a pdf or image. Also note that the `.qgz` project contains links to your data, and the datasets themselves are not embedded in the file. This means that if you change the name or location of source files, the link will break.
+
 ### The QGIS Interface:
 
 ![Image 1](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/1-Tutorial-1.png)
@@ -29,11 +33,7 @@ GIS projects and files can be confusing, as you will soon learn! Please set up a
 
 **5- Status Bar:** Shows you information on your current map, including the scale and mouse cursor’s coordinates. On the bottom right is also your projection system. 
 
-To change the main interface, you can go to View>Panels 
-
-### QGIS Project File
-
-As soon as you open a new project, save it in a designated folder. This will create a .qgz file, where your project is located. Note this is not the final map you are producing, and you will always need to export your maps as a pdf or image. Also note that the .qgz project contains links to your data, and the datasets themselves are not embedded in the file. This means that if you change the name or location of source files, the link will break.
+To change the main interface, you can go to **View>Panels** 
 
 **Let’s add some data, but first, a bit of explanation:**
 
@@ -43,13 +43,19 @@ As soon as you open a new project, save it in a designated folder. This will cre
 
 **Now we’ll begin:**
 
-![Image 2](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/2-Tutorial-1.png)
+Turn to your QGIS interface.
+
+The first thing you need to do is set your project **Coordinate Reference System** (more on this later!) Click on the bottom right corner (shown below), and search for **EPSG:4326** and click ok. 
+
+![Image 23](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/2-Tutorial-23.png)
 
 Move to the Google Drive > Tutorials > Tutorial 1 > [Data](https://drive.google.com/drive/folders/1WUO3lS13vYuyvtgiUEVwo1BOur4QrTiE), and download the `“Country-Boundaries-110”` file. Make sure to drag it into a designated folder. This dataset was downloaded from [Natural Earth](https://www.naturalearthdata.com/downloads/) where you can find a lot more datasets! 
 
 When you open the file, you will realize that there are 7 different file extensions which all make up a **Shapefile**. While you need them all to run your file (so keep your data organized!), the one essential file is the `.shp` extension. 
 
-Turn to your QGIS interface, and navigate to **Layer > Add Layer > Add Vector Layer**. Click the […] next to the Vector Datasets and find your `“Country-Boundaries-110”` file. Click the `.shp` extension, and press open, then add. 
+![Image 2](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/2-Tutorial-1.png)
+
+Now, navigate to **Layer > Add Layer > Add Vector Layer**. Click the […] next to the Vector Datasets and find your `“Country-Boundaries-110”` file. Click the `.shp` extension, and press open, then add. 
 
 You should now see countries of the world on your **Map Canvas** and in your **Layer Panel**. Let’s learn to navigate. 
 
