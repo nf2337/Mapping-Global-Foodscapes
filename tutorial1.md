@@ -45,8 +45,9 @@ As soon as you open a new project, save it in a designated folder. This will cre
 
 ![Image 2](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/2-Tutorial-1.png)
 
-Move to the Google Drive > Tutorials > Tutorial 1 > [Data](https://drive.google.com/drive/folders/1WUO3lS13vYuyvtgiUEVwo1BOur4QrTiE), and download the `“Country-Boundaries-110”` file. Make sure to drag it into a designated folder.  
-When you open the file, you will realize that there are  differen7t file extensions which all make up a shapefile. While you need them all to run your file (so keep your data organized!), the one essential file is the `.shp` extension. 
+Move to the Google Drive > Tutorials > Tutorial 1 > [Data](https://drive.google.com/drive/folders/1WUO3lS13vYuyvtgiUEVwo1BOur4QrTiE), and download the `“Country-Boundaries-110”` file. Make sure to drag it into a designated folder. This dataset was downloaded from [Natural Earth](https://www.naturalearthdata.com/downloads/) where you can find a lot more datasets! 
+
+When you open the file, you will realize that there are 7 different file extensions which all make up a **Shapefile**. While you need them all to run your file (so keep your data organized!), the one essential file is the `.shp` extension. 
 
 Turn to your QGIS interface, and navigate to Layer > Add Layer > Add Vector Layer. Click the […] next to the Vector Datasets and find your `“Country-Boundaries-110”` file. Click the .shp extension, and press open, then add. 
 
@@ -193,10 +194,10 @@ Once you’re done, we’ll head to change the **Projections.** Click on the bot
 
 There are over 7000 projections in QGIS. Each is identified by a unique **Authority ID.** Try some projections. To make it simple, here are a few codes you might want to type into the filter (make sure to click them once the option appears):
 
-&nbsp; **Robinson:** ESRI:53030
-&nbsp; **Sinusoidal:** ESRI:53008
-&nbsp; **Mollweide:** ESRI:53009
-&nbsp; **Bonne:** ESRI:53024
+&nbsp;**Robinson:** ESRI:53030
+&nbsp;**Sinusoidal:** ESRI:53008
+&nbsp;**Mollweide:** ESRI:53009
+&nbsp;**Bonne:** ESRI:53024
 
 Once you’ve experimented and you’re satisfied with a projection, close the window. Now we’re ready to export the map. We’ll cover that next tutorial, where we’ll learn to include a title, legend and scale bar. For now, take a screenshot of your Map Canvas. From your desktop, rename the file: LASTNAME_Tutorial_1 and upload it to the Tutorial 1 > [Output folder](https://drive.google.com/drive/folders/1gjJ8gSQffUpwS04EsPZkwrzP9fsaN6Zi). 
 
