@@ -8,9 +8,17 @@ description: Welcome to our class website.
 navigation:
   - title: Home
     url: /
-  - title: Setup
-    url: setup
   - title: Tutorial 1
     url: tutorial1
   - title: Tutorial 2
     url: tutorial2
+  - title: Tutorial 3
+    url: tutorial3
+  - title: Tutorial 4
+    url: tutorial4
+  - title: Tutorial 5
+    url: tutorial5
+  - title: Tutorial 6
+    url: tutorial6
+  - title: Tutorial 7
+    url: tutorial7
