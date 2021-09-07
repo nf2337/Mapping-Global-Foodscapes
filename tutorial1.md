@@ -11,7 +11,7 @@ This tutorial aims to introduce QGIS, a free open-source Geographic Information 
 
 First, you will need to download QGIS. The tutorials are written in version 3.20.2, so please make sure you are working with at least 3.2. You can download QGIS [here](https://qgis.org/en/site/forusers/download.html). 
 
-GIS projects and files can be confusing, as you will soon learn! Please set up a tutorials folder on your desktop with a subfolder for each tutorial, and keen your files well-ordered and clean!
+GIS projects and files can be confusing, as you will soon learn! Please set up a GIS folder on your desktop with a subfolder for each tutorial, and keen your files well-ordered and clean!
 
 ### The QGIS Interface:
 
@@ -31,7 +31,7 @@ GIS projects and files can be confusing, as you will soon learn! Please set up a
 
 To change the main interface, you can go to View>Panels 
 
-**QGIS Project File:**
+### QGIS Project File
 
 As soon as you open a new project, save it in a designated folder. This will create a .qgz file, where your project is located. Note this is not the final map you are producing, and you will always need to export your maps as a pdf or image. Also note that the .qgz project contains links to your data, and the datasets themselves are not embedded in the file. This means that if you change the name or location of source files, the link will break.
 
@@ -45,20 +45,20 @@ As soon as you open a new project, save it in a designated folder. This will cre
 
 ![Image 2](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/2-Tutorial-1.png)
 
-Move to the Google Drive > Tutorials > Tutorial 1 > Data, and download the “Country-Boundaries-110” file. 
-When you open the file, you will realize that there are 7 different file extensions which all make up a shapefile. While you need them all to run your file (so keep your data organized!), the one essential file is the .shp extension. 
+Move to the Google Drive > Tutorials > Tutorial 1 > [Data](https://drive.google.com/drive/folders/1WUO3lS13vYuyvtgiUEVwo1BOur4QrTiE), and download the `“Country-Boundaries-110”` file. Make sure to drag it into a designated folder.  
+When you open the file, you will realize that there are  differen7t file extensions which all make up a shapefile. While you need them all to run your file (so keep your data organized!), the one essential file is the `.shp` extension. 
 
-Turn to your QGIS interface, and navigate to Layer > Add Layer > Add Vector Layer. Click the […] next to the Vector Datasets and find your “Country-Boundaries-110” file. Click the .shp extension, and press open, then add. 
+Turn to your QGIS interface, and navigate to Layer > Add Layer > Add Vector Layer. Click the […] next to the Vector Datasets and find your `“Country-Boundaries-110”` file. Click the .shp extension, and press open, then add. 
 
-You should now see countries of the world on your Map Canvas and in your Layer Panel. Let’s learn to navigate. 
+You should now see countries of the world on your **Map Canvas** and in your **Layer Panel**. Let’s learn to navigate. 
 
 ![Image 3](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/3-Tutorial-1.png)
 
-These are some useful tools. The first is Pan Map, the second is Zoom Full (takes you to the full extent), and the third is Identify Feature. 
+These are some useful tools. The first is **Pan Map**, the second is **Zoom Full** (takes you to the full extent), and the third is **Identify Feature**. 
 
-Let’s try Identify Feature. Click on a country, and you will get a panel on the left that will show you some information. This includes the name, and lots of other entries. Where is this information coming from? 
+Let’s try **Identify Feature**. Click on a country, and you will get a panel on the left that will show you some information. This includes the name, and lots of other entries. Where is this information coming from? 
 
-The Identify Feature tool is a quick way to view attributes associated with each feature. To understand this more fully, navigate to your Layers Panel, and click Open Attributes Table. 
+The **Identify Feature** tool is a quick way to view attributes associated with each feature. To understand this more fully, navigate to your **Layers Panel**, and click **Open Attributes Table**. 
 
 ![Image 4](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/4-Tutorial-1.png)
 
