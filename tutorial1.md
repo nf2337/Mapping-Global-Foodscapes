@@ -47,7 +47,7 @@ Turn to your QGIS interface.
 
 The first thing you need to do is set your project **Coordinate Reference System** (more on this later!) Click on the bottom right corner (shown below), and search for **EPSG:4326** and click ok. 
 
-![Image 23](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/1-Tutorial-23.png)
+![Image 23](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/23-Tutorial-1.png)
 
 Move to the Google Drive > Tutorials > Tutorial 1 > [Data](https://drive.google.com/drive/folders/1WUO3lS13vYuyvtgiUEVwo1BOur4QrTiE), and download the `“Country-Boundaries-110”` file. Make sure to drag it into a designated folder. This dataset was downloaded from [Natural Earth](https://www.naturalearthdata.com/downloads/) where you can find a lot more datasets! 
 
