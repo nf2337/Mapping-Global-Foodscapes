@@ -12,16 +12,16 @@ Please follow the steps patiently and diligently so you don't run into any error
 
 **Office Hours:** You are strongly encouraged to attend office hours, which will be run like a tech lab session. I can help you run through the tutorials and tutorialing. Otherwise, you are welcome to email me with hiccups along the way, and always remember to include screenshots.
 
-### [Tutorial 1](https://nf2337.github.io/gh-pages-template/tutorial1) / Viewing and Visualizing Vector Data 
+### [Tutorial 1](https://nf2337.github.io/Mapping-Global-Foodscapes/tutorial1) / Viewing and Visualizing Vector Data 
 
-### [Tutorial 2](https://nf2337.github.io/gh-pages-template/tutorial2) / Working with Historical Data
+### [Tutorial 2](https://nf2337.github.io/Mapping-Global-Foodscapes/tutorial2) / Working with Historical Data
 
-### [Tutorial 3](https://nf2337.github.io/gh-pages-template/tutorial3) / Finding your own Datasets
+### [Tutorial 3](https://nf2337.github.io/Mapping-Global-Foodscapes/tutorial3) / Finding your own Datasets
 
-### [Tutorial 4](https://nf2337.github.io/gh-pages-template/tutorial4) / Using Satellite Images and Remote Sensing 
+### [Tutorial 4](https://nf2337.github.io/Mapping-Global-Foodscapes/tutorial4) / Using Satellite Images and Remote Sensing 
 
-### [Tutorial 5](https://nf2337.github.io/gh-pages-template/tutorial5) / Mapping the Headlines 
+### [Tutorial 5](https://nf2337.github.io/Mapping-Global-Foodscapes/tutorial5) / Mapping the Headlines 
 
-### [Tutorial 6](https://nf2337.github.io/gh-pages-template/tutorial6) / Visualizing the US Census (Optional)
+### [Tutorial 6](https://nf2337.github.io/Mapping-Global-Foodscapes/tutorial6) / Visualizing the US Census (Optional)
 
-### [Tutorial 7](https://nf2337.github.io/gh-pages-template/tutorial7) / Collect your own Data (Optional)
+### [Tutorial 7](https://nf2337.github.io/Mapping-Global-Foodscapes/tutorial7) / Collect your own Data (Optional)

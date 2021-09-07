@@ -49,13 +49,13 @@ Move to the Google Drive > Tutorials > Tutorial 1 > [Data](https://drive.google.
 
 When you open the file, you will realize that there are 7 different file extensions which all make up a **Shapefile**. While you need them all to run your file (so keep your data organized!), the one essential file is the `.shp` extension. 
 
-Turn to your QGIS interface, and navigate to Layer > Add Layer > Add Vector Layer. Click the […] next to the Vector Datasets and find your `“Country-Boundaries-110”` file. Click the .shp extension, and press open, then add. 
+Turn to your QGIS interface, and navigate to **Layer > Add Layer > Add Vector Layer**. Click the […] next to the Vector Datasets and find your `“Country-Boundaries-110”` file. Click the `.shp` extension, and press open, then add. 
 
 You should now see countries of the world on your **Map Canvas** and in your **Layer Panel**. Let’s learn to navigate. 
 
 ![Image 3](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/3-Tutorial-1.png)
 
-These are some useful tools. The first is **Pan Map**, the second is **Zoom Full** (takes you to the full extent), and the third is **Identify Feature**. 
+These are some useful tools. The first is **Pan Map**, the second is **Zoom Full** (takes you to the full extent of your map), and the third is **Identify Feature**. 
 
 Let’s try **Identify Feature**. Click on a country, and you will get a panel on the left that will show you some information. This includes the name, and lots of other entries. Where is this information coming from? 
 
@@ -63,7 +63,7 @@ The **Identify Feature** tool is a quick way to view attributes associated with 
 
 ![Image 4](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/4-Tutorial-1.png)
 
-The **Attributes Table** looks a lot like an excel sheet, and that’s because it is! Every geographic feature, in our case country, has a row associated with it, and this is called a **field**. The columns are called **attributes**. 
+The **Attributes Table** looks a lot like an excel sheet, and that’s because it is one! Every geographic feature, in our case country, has a row associated with it, and this is called a **field**. The columns are called **attributes**. 
 
 ![Image 5](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/5-Tutorial-1.png)
 
