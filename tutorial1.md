@@ -77,17 +77,17 @@ Scroll to the right of your attributes table, and you will find an attribute cal
 
 **Can we make a map that reflects world GDP? Yes!** 
 
-Close your attributes table. Right click your layer again, and go to **Properties > Symbology**. There you will find settings to change the styling of your map, or changing the appearance f your layers. 
+Close your attributes table. Right click your layer again, and go to **Properties > Symbology**. There you will find settings to change the styling of your map, or changing the appearance of your layers. 
 
 ![Image 6](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/6-Tutorial-1.png)
 
-At the top, you can see that the settings are currently on Single Symbol. We want to change that to Graduated settings. This allows you to classify the data by a numeric field attribute into discrete categories- in our case, GDP. 
+At the top, you can see that the settings are currently on **Single Symbol**. We want to change that to **Graduated** settings. This allows you to classify the data by a numeric field attribute into discrete categories- in our case, GDP. 
 
 ![Image 7](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/7-Tutorial-1.png)
 
-First, assign a **Value**, or choose `GDP_MD_EST`. Then hit classify. 
+First, assign a **Value**, or choose `GDP_MD_EST`. Then hit **Classify**. 
 
-The **Color ramp** allows you to choose the spectrum of colors you will use. QGIS offers a great selection. ollowing the small down arrow, you can choose pre-identified spectrums. 
+The **Color ramp** allows you to choose the spectrum of colors you will use. QGIS offers a great selection. following the small down arrow, you can choose pre-identified spectrums. 
 
 The **Mode** allows you to chose the way you want to classify your data, or how you want to create seperate bins. These include Equal Count (Quantile), Equal Interval, Logarithmic Scale, Natural Breaks (Jenks), Pretty Breaks, or Standard Deviation. These modes are all a result of complex statistical theory, but I leave it up to you to chose here what you find most suitable. You can explore the distribution of your data in the historgram tab. You can learn more about classification methods [here](https://www.youtube.com/watch?v=0ebL8OvG8Jc&ab_channel=RhumbLineMaps). 
  
@@ -162,7 +162,7 @@ There you have it. This will allow you to see small countries, like Kuwait, that
 
 So far, we’ve been seeing a “normal” map of the world in WGS84, which is the **Coordinate Reference System (CRS)** used by the Global Positioning System. 
 
-**Coordinate Reference System (CRS):** the method that QGIS uses to show the 3D surface of the globe on your 2D screen. Coordinate Reference Systems are very complicated,and it can take years to master them. It is important that our data is in the same CSR so that they line up on top of each other. There are two different types of CRS: 
+**Coordinate Reference System (CRS):** the method that QGIS uses to show the 3D surface of the globe on your 2D screen. Coordinate Reference Systems are very complicated, and it can take years to master them. It is important that our data is in the same CSR so that they line up on top of each other. There are two different types of CRS: 
 
 **1- Geographic CRS:** uses latitude and longitude coordinates to tell you where you are, based on differently shaped models of the globe. We’ll mostly be using WGS 84.
 
@@ -176,7 +176,7 @@ Please take a few minutes to read about projection systems [here](https://www.le
 
 Click on others including: Robinson, Sinusoidal, Mollweide, Bonne. We’ll explore representing our map with these projections. 
 
-Before we start retrojecting our data, let’s add some grid lines. 
+Before we start re-projecting our data, let’s add some grid lines. 
 
 Go to **Vector > Research Tools > Create Grid**
 
@@ -205,6 +205,6 @@ There are over 7000 projections in QGIS. Each is identified by a unique **Author
 &nbsp;**Mollweide:** ESRI:53009
 &nbsp;**Bonne:** ESRI:53024
 
-Once you’ve experimented and you’re satisfied with a projection, close the window. Now we’re ready to export the map. We’ll cover that next tutorial, where we’ll learn to include a title, legend and scale bar. For now, take a screenshot of your Map Canvas. From your desktop, rename the file: LASTNAME_Tutorial_1 and upload it to the Tutorial 1 > [Output folder](https://drive.google.com/drive/folders/1gjJ8gSQffUpwS04EsPZkwrzP9fsaN6Zi). 
+Once you’ve experimented and you’re satisfied with a projection, close the window. Now we’re ready to export the map. We’ll cover the **Layout Panel** next tutorial, where we’ll learn to include a title, legend and scale bar. For now, take a screenshot of your Map Canvas. From your desktop, rename the file: LASTNAME_Tutorial_1 and upload it to the Tutorial 1 > [Output folder](https://drive.google.com/drive/folders/1gjJ8gSQffUpwS04EsPZkwrzP9fsaN6Zi). 
 
 See you next time!! 
