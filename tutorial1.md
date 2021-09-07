@@ -43,7 +43,7 @@ As soon as you open a new project, save it in a designated folder. This will cre
 
 **Now we’ll begin:**
 
-![Image 2](/Mapping-Global-Foodscapes/Assets/img/2-Tutorial-1.png)
+![Image 2](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/2-Tutorial-1.png)
 
 Move to the Google Drive > Tutorials > Tutorial 1 > Data, and download the “Country-Boundaries-110” file. 
 When you open the file, you will realize that there are 7 different file extensions which all make up a shapefile. While you need them all to run your file (so keep your data organized!), the one essential file is the .shp extension. 
@@ -52,7 +52,7 @@ Turn to your QGIS interface, and navigate to Layer > Add Layer > Add Vector Laye
 
 You should now see countries of the world on your Map Canvas and in your Layer Panel. Let’s learn to navigate. 
 
-![Image 3](/Mapping-Global-Foodscapes/Assets/img/3-Tutorial-1.png)
+![Image 3](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/3-Tutorial-1.png)
 
 These are some useful tools. The first is Pan Map, the second is Zoom Full (takes you to the full extent), and the third is Identify Feature. 
 
@@ -60,23 +60,23 @@ Let’s try Identify Feature. Click on a country, and you will get a panel on th
 
 The Identify Feature tool is a quick way to view attributes associated with each feature. To understand this more fully, navigate to your Layers Panel, and click Open Attributes Table. 
 
-![Image 4](/Mapping-Global-Foodscapes/Assets/img/4-Tutorial-1.png)
+![Image 4](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/4-Tutorial-1.png)
 
 The attributes table looks a lot like an excel sheet, and that’s because it is! Every geographic feature, in our case country, has a row associated with it, and this is called a field. The columns are called attributes. 
 
-![Image 5](/Mapping-Global-Foodscapes/Assets/img/5-Tutorial-1.png)
+![Image 5](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/5-Tutorial-1.png)
 
 Scroll to the left of your attributes table, and you will find an attribute called GDP_MD_EST. This is shorthand for Estimated Gross Domestic Product in Million Dollars. The GDP_YEAR attribute indicates that the GDP estimate is for the year 2016. By clicking on the header, you can rearrange the dataset in ascending or descending order. Note that the country with the highest GDP 21,140,000 million USD, or add 6 zeros, about 21 trillion dollars. Note also, that there is an estimate for population size, under the attribute POP_EST.
 
 Can we make a map that reflects world GDP? Yes! 
 
-![Image 6](/Mapping-Global-Foodscapes/Assets/img/6-Tutorial-1.png)
+![Image 6](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/6-Tutorial-1.png)
 
 Close your attributes table. Right click your layer again, and go to Properties > Symbology. There you will find settings to change the styling of your map. 
 
 At the top, you can see that the settings are currently on Single Symbol settings. We want to change that to Graduated settings. This means you will be able to classify and represent your dataset according to an attribute, in our case: GDP. Under value, choose GDP_MD_EST. Then hit classify. 
 
-![Image 7](/Mapping-Global-Foodscapes/Assets/img/7-Tutorial-1.png)
+![Image 7](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/7-Tutorial-1.png)
 
 The color lamp will allow you to choose the spectrum of colors you can use. Following the small down arrow, you can choose pre-identified spectrum formats. 
 
@@ -88,7 +88,7 @@ Make your choice here, and I leave it up to you to experiment and find your pref
 
 I create 5 classes using the Natural Breaks (Jenks) mode. 
 
-![Image 8](/Mapping-Global-Foodscapes/Assets/img/8-Tutorial-1.png)
+![Image 8](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/8-Tutorial-1.png)
 
 This is my map of the world, classified according to GDP. I can use the Identify Features tool to quickly explore the results (shift+command+I shortcut). China and the USA appear in the “Very High” category. Then, India, Brazil, Russia, Indonesia and Germany appear in the “High” category, and so on. 
 
@@ -102,11 +102,11 @@ Then, duplicate your layer. Again, right click the layer > duplicate layer. Rena
 
 Your layers panel should look like this. You can drag and drop layers to re-arrange them, untick and tick boxes to show and hide layer, etc. Drag your Countries GDP/Capita layer on top of the Countries GDP layer.
 
-![Image 9](/Mapping-Global-Foodscapes/Assets/img/9-Tutorial-1.png)
+![Image 9](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/9-Tutorial-1.png)
 
 On the new layers, go to Properties > Symbology tab. This time, we will calculate a value rather than using a pre-existing one from our attributes table. Click the calculate sign to the right of Value, and you will get the following dialogue box. Here is where we’re going to do some math to determine the GDP per capita. 
 
-![Image 10](/Mapping-Global-Foodscapes/Assets/img/10-Tutorial-1.png)
+![Image 10](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/10-Tutorial-1.png)
 
 From the right hand menu, you want to expand the “Fields and Values” tab, then chose  . This will multiple GPD by a million (remember, the attribute is GDP in Million Dollars), then will divide it by the population estimate, giving us GDP per capita. Click Ok. 
 
@@ -114,34 +114,34 @@ Now you will have to click classify again, and play around with the settings. Wh
 
 By turning layers on and off, I can quickly see the difference between the countries. 
 
-![Image 11](/Mapping-Global-Foodscapes/Assets/img/11-Tutorial-1.png)
+![Image 11](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/11-Tutorial-1.png)
 
 You can do a lot more with styling. Go back to Properties > Symbology. If you double click on the symbol (you need to click exactly here), this will the Symbol Selector panel. 
 
-![Image 12](/Mapping-Global-Foodscapes/Assets/img/12-Tutorial-1.png)
+![Image 12](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/12-Tutorial-1.png)
 
 From here, click the Simple Fill tab, which will allow you to play around with with Fill color and style, and Stroke color and style. I am going to change the fill style and stroke color. Feel free to experiment to find the style that best suits the scale of your map. Note that you have to make changes to every single class separately.
 
-![Image 13](/Mapping-Global-Foodscapes/Assets/img/13-Tutorial-1.png)
+![Image 13](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/13-Tutorial-1.png)
 
 Now that we’re satisfied with the style, we’ll add some labels to identify separate countries. Go back to Properties, and this time click Labels. The default is No Labels, but we’ll change that to Single Labels. 
 
-![Image 14](/Mapping-Global-Foodscapes/Assets/img/14-Tutorial-1.png)
+![Image 14](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/14-Tutorial-1.png)
 
 You can basically choose any attribute from your attributes table as a label. The default, NAME is actually what we need. Click Apply to see the results. You can change the formatting of the text with many options below. I’ll change the color of the text, and will add a small buffer (or white outline).
 
-![Image 15](/Mapping-Global-Foodscapes/Assets/img/15-Tutorial-1.png)
+![Image 15](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/15-Tutorial-1.png)
 
 The result looks pretty good, but there are way too many names on the map. What if, I want to add the names only for countries classified as Very High GDP per capita. That’s possible! 
 
 Back to Properties > Labels. This time, you want to select Rule-based labels. Click on the rule tab, then on the calculate sign, and you’ll get Expression String Builder. You want to basically write out a formula that will say: LABEL THIS ONLY IF the country has a GDP per capita great > X amount. 
 
-![Image 16](/Mapping-Global-Foodscapes/Assets/img/16-Tutorial-1.png)
+![Image 16](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/16-Tutorial-1.png)
 
 Copy this equation into the expression builder: (("GDP_MD_EST"*1000000)/ "POP_EST") >= 35761 
 You’ll get better at writing these expressions with time. Basically, this indicates the rule, that labels will appear for countries when their GDP per capita is greater than 35,761 which is the lower value in our Very High classification. I derived this number from my layer on the right. Click ok, and ok. 
 
-![Image 17](/Mapping-Global-Foodscapes/Assets/img/17-Tutorial-1.png)
+![Image 17](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/17-Tutorial-1.png)
 
 There you have it. This will allow you to see small countries, like Kuwait, that have a very small area, but now you know also have a very high GDP per capita! 
 
@@ -159,7 +159,7 @@ But there’s a slight problem: the earth’s surface is curved and not a perfec
 
 Please take a few minutes to read about projection systems here. Use the interactive projections tool to check out different distortions. WGS 84 is a Mercator projection, it looks like this. 
 
-![Image 18](/Mapping-Global-Foodscapes/Assets/img/18-Tutorial-1.png)
+![Image 18](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/18-Tutorial-1.png)
 
 Click on others including: Robinson, Sinusoidal, Mollweide, Bonne. We’ll explore representing our map with these projections. 
 
@@ -167,23 +167,23 @@ Before we start retrojecting our data, let’s add some grid lines.
 
 Go to Vector > Research Tools > Create Grid
 
-![Image 19](/Mapping-Global-Foodscapes/Assets/img/19-Tutorial-1.png)
+![Image 19](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/19-Tutorial-1.png)
 
 Set the parameters of your grid. Change the Grid type to Line, Horizontal/Vertical spacing to 15 degrees, and identify the Grid extent to Calculate from Layer > Countries GDP/Capita. Then press run. This is basically creating a new vector file, with line attributes, and adding it to your Layers panel and browser panel
 
-![Image 20](/Mapping-Global-Foodscapes/Assets/img/20-Tutorial-1.png)
+![Image 20](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/20-Tutorial-1.png)
 
 Another quick step. Go to Vector > Geometry Tools > Densify By Count. Make sure the input layer is your grid. Change the number of vertices to 50, and run it. 
 
 Great, now delete the grid layer by right clicking it > remove layer. The Densified layer is still temporary, if you close your project and open it again, it will disappear. First lets save the densified  data. Click on the temporary icon on the layer in the layers panel. Always save your files as .geoJSON which is the most efficient type, and will compress your data in 1 file (instead of 7, like the .sph shapefile format). Give your layer a location and title by clicking the […] icon and press ok. 
 
-![Image 21](/Mapping-Global-Foodscapes/Assets/img/21-Tutorial-1.png)
+![Image 21](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/21-Tutorial-1.png)
 
 Now you can also style your line by right clicking in the layers panel > Properties > Symbology. 
 
 Once you’re done, we’ll head to change the projections. Click on the bottom right corner, as indicated below. 
 
-![Image 22](/Mapping-Global-Foodscapes/Assets/img/22-Tutorial-1.png)
+![Image 22](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/22-Tutorial-1.png)
 
 There are over 7000 projections in QGIS. Each is identified by a unique Authority ID. Try some projections. To make it simple, here are a few codes you might want to type into the filter (make sure to click them once the option appears):
 
