@@ -74,92 +74,94 @@ Close your attributes table. Right click your layer again, and go to **Propertie
 
 ![Image 6](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/6-Tutorial-1.png)
 
-At the top, you can see that the settings are currently on Single Symbol. We want to change that to Graduated settings. This means you will be able to classify and represent the countries of the world using the attributes table, in our case: GDP. 
+At the top, you can see that the settings are currently on Single Symbol. We want to change that to Graduated settings. This allows you to classify the data by a numeric field attribute into discrete categories- in our case, GDP. 
 
 ![Image 7](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/7-Tutorial-1.png)
 
 First, assign a **Value**, or choose `GDP_MD_EST`. Then hit classify. 
 
-The **color ramp** allows you to choose the spectrum of colors you will use. QGIS offers a great selection. ollowing the small down arrow, you can choose pre-identified spectrums. 
+The **Color ramp** allows you to choose the spectrum of colors you will use. QGIS offers a great selection. ollowing the small down arrow, you can choose pre-identified spectrums. 
 
-The **mode** allows you to chose the way you want to classify your data, or how you want to create seperate bins. These include Equal Count (Quantile), Equal Interval, Logarithmic Scale, Natural Breaks (Jenks), Pretty Breaks, or Standard Deviation. These modes are all a result of complex statistical theory, but I leave it up to you to chose here what you find most suitable. You can explore the distribution of your data in the historgram tab. 
+The **Mode** allows you to chose the way you want to classify your data, or how you want to create seperate bins. These include Equal Count (Quantile), Equal Interval, Logarithmic Scale, Natural Breaks (Jenks), Pretty Breaks, or Standard Deviation. These modes are all a result of complex statistical theory, but I leave it up to you to chose here what you find most suitable. You can explore the distribution of your data in the historgram tab. You can learn more about classification methods [here](https://www.youtube.com/watch?v=0ebL8OvG8Jc&ab_channel=RhumbLineMaps). 
  
-The classes identify the number of bins you want to create for your data. If you want to classify GDP according to “High”, “Medium” and “Low”, you can chose 3 classes. If you want further gradation, like “Very High”, “High”, “Medium”, “Low”, “Very Low” you can chose 5 classes. 
+The **Classes** identify the number of discrete categories, or bins, you want to create for your data. If you want to classify GDP according to “High”, “Medium” and “Low”, you can chose 3 classes. If you want further gradation, like “Very High”, “High”, “Medium”, “Low”, “Very Low” you can chose 5 classes. 
 
-Make your choice here, and I leave it up to you to experiment and find your preferred map of the world. There is no “correct” result. You can hit apply to see changes reflected on you map canvas. When you are done, click ok. 
+I will leave it up to you to experiment and find your preferred map of the world. Notice that your classification method really determines the potential interpretation of your map. There is no “correct” result. You can hit apply to see changes reflected on you map canvas. When you are done, click ok. 
 
 I create 5 classes using the Natural Breaks (Jenks) mode. 
 
 ![Image 8](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/8-Tutorial-1.png)
 
-This is my map of the world, classified according to GDP. I can use the Identify Features tool to quickly explore the results (shift+command+I shortcut). China and the USA appear in the “Very High” category. Then, India, Brazil, Russia, Indonesia and Germany appear in the “High” category, and so on. 
+This is my map of the world, classified according to GDP. I can use the **Identify Features** tool to quickly explore the results (shift+command+I shortcut). China and the USA appear in the “Very High” category. Then, India, Brazil, Russia, Indonesia and Germany appear in the “High” category, and so on. 
 
 But something is amiss? We know, of course, that GDP really depends on the size of the country and its population. This is why economists worldwide have adopted the GDP per capita measure, which adjusts for population size. 
 
-Can we map that instead? Yes. 
+## Can we map that instead? Yes. 
 
-First lets keep the current layer, and rename it Countries GDP. To rename, right click the layer in the Layers Panel, and click rename layer. 
+First lets keep the current layer, and rename it `Countries GDP`. To rename, right click the layer in the **Layers Panel**, and click **Rename layer**. 
 
-Then, duplicate your layer. Again, right click the layer > duplicate layer. Rename the duplicate Countries GDP/Capita.
+Then, duplicate your layer. Again, right click the **layer > duplicate layer**. Rename the duplicate Countries GDP/Capita.
 
-Your layers panel should look like this. You can drag and drop layers to re-arrange them, untick and tick boxes to show and hide layer, etc. Drag your Countries GDP/Capita layer on top of the Countries GDP layer.
+Your layers panel should look like this. You can drag and drop layers to re-arrange them, untick and tick boxes to show and hide layers, etc. Drag your Countries GDP/Capita layer on top of the Countries GDP layer.
 
 ![Image 9](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/9-Tutorial-1.png)
 
-On the new layers, go to Properties > Symbology tab. This time, we will calculate a value rather than using a pre-existing one from our attributes table. Click the calculate sign to the right of Value, and you will get the following dialogue box. Here is where we’re going to do some math to determine the GDP per capita. 
+On the new layers, go to **Properties > Symbology tab**. This time, we will calculate a value rather than using a pre-existing one from our attribute table. Click the **Calculate sign** to the right of **Value**, and you will get the following **Expression dialog box**. Here is where we’re going to do some math to determine the GDP per capita. 
 
 ![Image 10](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/10-Tutorial-1.png)
 
-From the right hand menu, you want to expand the “Fields and Values” tab, then chose  . This will multiple GPD by a million (remember, the attribute is GDP in Million Dollars), then will divide it by the population estimate, giving us GDP per capita. Click Ok. 
+Copy and paste the following function: `("GDP_MD_EST"*1000000)/"POP_EST"`
 
-Now you will have to click classify again, and play around with the settings. When I press apply, I notice that the Natural Breaks (Jenks) mode doesn’t make a lot of sense. Antartica, because of its small population size, is the only country that appears to have Very High GDP per capita. I will classify again according to Equal Count. This makes a lot more sense! 
+This will multiply GPD by a million (remember the attribute is GDP in Million Dollars), then will divide it by the population estimate, giving us GDP per capita. Click Ok. 
+
+Now you will have to click classify again, and play around with the settings. When I press apply, I notice that the **Natural Breaks (Jenks)** mode doesn’t make a lot of sense. Antartica, because of its small population size, is the only country that appears to have Very High GDP per capita. I will classify again according to **Equal Count**. Now that looks a lot more like it! 
 
 By turning layers on and off, I can quickly see the difference between the countries. 
 
 ![Image 11](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/11-Tutorial-1.png)
 
-You can do a lot more with styling. Go back to Properties > Symbology. If you double click on the symbol (you need to click exactly here), this will the Symbol Selector panel. 
+You can do a lot more with styling. Go back to **Properties > Symbology**. If you double click on the symbol (you need to click exactly here), this will the **Symbol Selector** panel. 
 
 ![Image 12](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/12-Tutorial-1.png)
 
-From here, click the Simple Fill tab, which will allow you to play around with with Fill color and style, and Stroke color and style. I am going to change the fill style and stroke color. Feel free to experiment to find the style that best suits the scale of your map. Note that you have to make changes to every single class separately.
+From here, click the **Simple Fill** tab, which will allow you to play around with with Fill color and style, and Stroke color and style. I am going to change the fill style and stroke color. Feel free to experiment to find the style that best suits the scale of your map. Note that you have to make changes to every single class separately.
 
 ![Image 13](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/13-Tutorial-1.png)
 
-Now that we’re satisfied with the style, we’ll add some labels to identify separate countries. Go back to Properties, and this time click Labels. The default is No Labels, but we’ll change that to Single Labels. 
+Now that we’re satisfied with the style, we’ll add some Labels to identify separate countries. Go to **Properties > Labels**. The default is **No Labels**, but we’ll change that to **Single Labels**. 
 
 ![Image 14](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/14-Tutorial-1.png)
 
-You can basically choose any attribute from your attributes table as a label. The default, NAME is actually what we need. Click Apply to see the results. You can change the formatting of the text with many options below. I’ll change the color of the text, and will add a small buffer (or white outline).
+You can basically choose any attribute from your table to use as a label. The default, **NAME** is actually what we need. Click Apply to see the results. You can change the formatting of the text with many options below. I’ll change the color of the text, and will add a small buffer (or white outline).
 
 ![Image 15](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/15-Tutorial-1.png)
 
 The result looks pretty good, but there are way too many names on the map. What if, I want to add the names only for countries classified as Very High GDP per capita. That’s possible! 
 
-Back to Properties > Labels. This time, you want to select Rule-based labels. Click on the rule tab, then on the calculate sign, and you’ll get Expression String Builder. You want to basically write out a formula that will say: LABEL THIS ONLY IF the country has a GDP per capita great > X amount. 
+Back to **Properties > Labels**. This time, you want to select **Rule-Based Labels**. Click on the **Rule tab**, then on the **Calculate sign**, and you’ll get **Expression String Builder**. You want to basically write out a formula that will say: LABEL THIS ONLY IF the country has a GDP per capita great > X amount. 
 
 ![Image 16](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/16-Tutorial-1.png)
 
-Copy this equation into the expression builder: (("GDP_MD_EST"*1000000)/ "POP_EST") >= 35761 
-You’ll get better at writing these expressions with time. Basically, this indicates the rule, that labels will appear for countries when their GDP per capita is greater than 35,761 which is the lower value in our Very High classification. I derived this number from my layer on the right. Click ok, and ok. 
+Copy this function into the expression builder: `(("GDP_MD_EST"*1000000)/ "POP_EST") >= 35761` 
+You’ll get better at writing these functions with time. Basically, this indicates the rule, that labels will appear for countries when their GDP per capita is greater than 35,761 which is the lower value in our Very High classification. I derived this number from my layer on the left. Click ok, and ok. 
 
 ![Image 17](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/17-Tutorial-1.png)
 
 There you have it. This will allow you to see small countries, like Kuwait, that have a very small area, but now you know also have a very high GDP per capita! 
 
-Some fun with Projections! 
+## Some fun with Projections! 
 
-So far, we’ve been seeing a “normal” map of the world in WGS84, which is the Coordinate Reference System used by the Global Positioning System. 
+So far, we’ve been seeing a “normal” map of the world in WGS84, which is the **Coordinate Reference System (CRS)** used by the Global Positioning System. 
 
-Coordinate Reference System (CRS): the method that QGIS uses to show the 3D surface of the globe on your 2D screen. Map projection systems are very complicated- and it can take years to master them. It is important that our data is in the same CSR so that they line up on top of each other. There are two different types of CRS: 
+**Coordinate Reference System (CRS):** the method that QGIS uses to show the 3D surface of the globe on your 2D screen. Coordinate Reference Systems are very complicated,and it can take years to master them. It is important that our data is in the same CSR so that they line up on top of each other. There are two different types of CRS: 
 
-1) Geographic CRS: uses latitude and longitude coordinates to tell you where you are, based on differently shaped models of the globe. We’ll mostly be using WGS 84, 
+**1- Geographic CRS:** uses latitude and longitude coordinates to tell you where you are, based on differently shaped models of the globe. We’ll mostly be using WGS 84.
 
-2) Projected CRS: uses a mathematical algorithm to present the round earth on a flat map. Most common projected reference system is the Universal Transverse Mercator (UTM), which is fixed at the equator. 
+**2- Projected CRS:** uses a mathematical algorithm to present the round earth on a flat map. Most common projected reference system is the Universal Transverse Mercator (UTM), which is fixed at the equator. 
 
-But there’s a slight problem: the earth’s surface is curved and not a perfect sphere, introducing an element of distortion. Coordinate reference systems can be used to preserve shape, distance, relative size or direction. 
+There’s a slight problem with projection systems! The earth’s surface is curved and not a perfect sphere, introducing elements of distortion. Coordinate reference systems are only approximations, and there are some trade offs to be made between preserving shape, distances, relative sizes or directions. 
 
-Please take a few minutes to read about projection systems here. Use the interactive projections tool to check out different distortions. WGS 84 is a Mercator projection, it looks like this. 
+Please take a few minutes to read about projection systems [here](https://www.leventhalmap.org/digital-exhibitions/bending-lines/how-to-bend/projections/). Use the interactive projections tool to check out different distortions. 
 
 ![Image 18](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/18-Tutorial-1.png)
 
