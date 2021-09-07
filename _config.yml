@@ -10,3 +10,5 @@ navigation:
     url: /
   - title: Setup
     url: setup
+  -title: Tutorial 1
+    url: tutorial-1
