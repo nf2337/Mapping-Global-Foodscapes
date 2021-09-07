@@ -116,11 +116,13 @@ This will multiply GPD by a million (remember the attribute is GDP in Million Do
 
 Now you will have to click classify again, and play around with the settings. When I press apply, I notice that the **Natural Breaks (Jenks)** mode doesn’t make a lot of sense. Antartica, because of its small population size, is the only country that appears to have Very High GDP per capita. I will classify again according to **Equal Count**. Now that looks a lot more like it! 
 
-By turning layers on and off, I can quickly see the difference between the countries. 
+By turning layers on and off, I can quickly see the difference between the representation of GDP and GDP per Capita. 
 
 ![Image 11](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/11-Tutorial-1.png)
 
-You can do a lot more with styling. Go back to **Properties > Symbology**. If you double click on the symbol (you need to click exactly here), this will the **Symbol Selector** panel. 
+## You can do a lot more with styling. 
+
+Go back to **Properties > Symbology**. If you double click on the symbol (you need to click exactly here), this will the **Symbol Selector** panel. 
 
 ![Image 12](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/12-Tutorial-1.png)
 
@@ -191,10 +193,10 @@ Once you’re done, we’ll head to change the **Projections.** Click on the bot
 
 There are over 7000 projections in QGIS. Each is identified by a unique **Authority ID.** Try some projections. To make it simple, here are a few codes you might want to type into the filter (make sure to click them once the option appears):
 
-Robinson: ESRI:53030
-Sinusoidal: ESRI:53008
-Mollweide: ESRI:53009
-Bonne: ESRI:53024
+&nbsp; **Robinson:** ESRI:53030
+&nbsp; **Sinusoidal:** ESRI:53008
+&nbsp; **Mollweide:** ESRI:53009
+&nbsp; **Bonne:** ESRI:53024
 
 Once you’ve experimented and you’re satisfied with a projection, close the window. Now we’re ready to export the map. We’ll cover that next tutorial, where we’ll learn to include a title, legend and scale bar. For now, take a screenshot of your Map Canvas. From your desktop, rename the file: LASTNAME_Tutorial_1 and upload it to the Tutorial 1 > [Output folder](https://drive.google.com/drive/folders/1gjJ8gSQffUpwS04EsPZkwrzP9fsaN6Zi). 
 
