@@ -1,6 +1,9 @@
 theme: jekyll-theme-minimal
-title: GitHub pages template
-description: A simple template based on minimal jekyll theme
+title: Mapping Global Foodscapes
+description: Welcome to our class website. 
+  Here you can find the tutorials for completion.
+  You can also go to the <a href="https://docs.google.com/document/d/1ktxUytArJO10L6vUH_Qcttt8Z-vhYGEzgBd-mcRFVpc/edit">Syllabus</a>,
+  and <a href="https://drive.google.com/drive/folders/1aGT54tWmaqV9I3zcex7Wni7NAAmqXRe0">Google Drive</a>.
 show_downloads: True
 navigation:
   - title: Home
