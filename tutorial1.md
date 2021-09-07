@@ -74,13 +74,15 @@ Close your attributes table. Right click your layer again, and go to **Propertie
 
 ![Image 6](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/6-Tutorial-1.png)
 
-At the top, you can see that the settings are currently on Single Symbol. We want to change that to Graduated settings. This means you will be able to classify and represent the countries of the world using the attributes table, in our case: GDP. Under value, choose `GDP_MD_EST`. Then hit classify. 
+At the top, you can see that the settings are currently on Single Symbol. We want to change that to Graduated settings. This means you will be able to classify and represent the countries of the world using the attributes table, in our case: GDP. 
 
 ![Image 7](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/7-Tutorial-1.png)
 
-The color lamp will allow you to choose the spectrum of colors you can use. Following the small down arrow, you can choose pre-identified spectrum formats. 
+First, assign a **Value**, or choose `GDP_MD_EST`. Then hit classify. 
 
-The mode allows you to chose the way you want to classify your data, or how you want to create the bins that hold your data. These include Equal Count (Quantile), Equal Interval, Logarithmic Scale, Natural Breaks (Jenks), Pretty Breaks, or Standard Deviation. These modes are all a result of complex statistical theory, but I leave it up to you to chose here what you find most suitable. You can explore the distribution of your data in the historgram tab. 
+The **color ramp** allows you to choose the spectrum of colors you will use. QGIS offers a great selection. ollowing the small down arrow, you can choose pre-identified spectrums. 
+
+The **mode** allows you to chose the way you want to classify your data, or how you want to create seperate bins. These include Equal Count (Quantile), Equal Interval, Logarithmic Scale, Natural Breaks (Jenks), Pretty Breaks, or Standard Deviation. These modes are all a result of complex statistical theory, but I leave it up to you to chose here what you find most suitable. You can explore the distribution of your data in the historgram tab. 
  
 The classes identify the number of bins you want to create for your data. If you want to classify GDP according to “High”, “Medium” and “Low”, you can chose 3 classes. If you want further gradation, like “Very High”, “High”, “Medium”, “Low”, “Very Low” you can chose 5 classes. 
 
