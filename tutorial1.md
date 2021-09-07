@@ -70,11 +70,11 @@ Scroll to the right of your attributes table, and you will find an attribute cal
 
 **Can we make a map that reflects world GDP? Yes!** 
 
+Close your attributes table. Right click your layer again, and go to **Properties > Symbology**. There you will find settings to change the styling of your map, or changing the appearance f your layers. 
+
 ![Image 6](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/6-Tutorial-1.png)
 
-Close your attributes table. Right click your layer again, and go to **Properties > Symbology**. There you will find settings to change the styling of your map. 
-
-At the top, you can see that the settings are currently on Single Symbol settings. We want to change that to Graduated settings. This means you will be able to classify and represent your dataset according to an attribute, in our case: GDP. Under value, choose `GDP_MD_EST`. Then hit classify. 
+At the top, you can see that the settings are currently on Single Symbol. We want to change that to Graduated settings. This means you will be able to classify and represent the countries of the world using the attributes table, in our case: GDP. Under value, choose `GDP_MD_EST`. Then hit classify. 
 
 ![Image 7](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/7-Tutorial-1.png)
 
