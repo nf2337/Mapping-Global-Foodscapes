@@ -15,7 +15,7 @@ GIS projects and files can be confusing, as you will soon learn! Please set up a
 
 ### The QGIS Interface:
 
-![Image 1](/Mapping-Global-Foodscapes/Assets/img/1-Tutorial-1.png)
+![Image 1](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/1-Tutorial-1.png)
 
 **Here’s a quick overview of the user interface:**
 

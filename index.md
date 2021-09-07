@@ -16,7 +16,7 @@ Please follow the steps patiently and diligently so you don't run into any error
 
 ### [Tutorial 2](https://nf2337.github.io/gh-pages-template/tutorial2) / Working with Historical Data
 
-### [Tutorial 3](https://nf2337.github.io/gh-pages-template/tutorial3)/ Finding your own Datasets
+### [Tutorial 3](https://nf2337.github.io/gh-pages-template/tutorial3) / Finding your own Datasets
 
 ### [Tutorial 4](https://nf2337.github.io/gh-pages-template/tutorial4) / Using Satellite Images and Remote Sensing 
 
