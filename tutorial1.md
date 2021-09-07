@@ -62,19 +62,19 @@ The **Identify Feature** tool is a quick way to view attributes associated with 
 
 ![Image 4](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/4-Tutorial-1.png)
 
-The attributes table looks a lot like an excel sheet, and that’s because it is! Every geographic feature, in our case country, has a row associated with it, and this is called a field. The columns are called attributes. 
+The **Attributes Table** looks a lot like an excel sheet, and that’s because it is! Every geographic feature, in our case country, has a row associated with it, and this is called a **field**. The columns are called **attributes**. 
 
 ![Image 5](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/5-Tutorial-1.png)
 
-Scroll to the left of your attributes table, and you will find an attribute called GDP_MD_EST. This is shorthand for Estimated Gross Domestic Product in Million Dollars. The GDP_YEAR attribute indicates that the GDP estimate is for the year 2016. By clicking on the header, you can rearrange the dataset in ascending or descending order. Note that the country with the highest GDP 21,140,000 million USD, or add 6 zeros, about 21 trillion dollars. Note also, that there is an estimate for population size, under the attribute POP_EST.
+Scroll to the right of your attributes table, and you will find an attribute called `GDP_MD_EST`. This is shorthand for Estimated Gross Domestic Product in Million Dollars. `The GDP_YEAR` attribute indicates that the GDP estimate is for the year 2016. By clicking on the header, you can rearrange the dataset in ascending or descending order. Note that the country with the highest GDP 21,140,000 million USD, or add 6 zeros, about 21 trillion dollars. Note also, that there is an estimate for population size, under the attribute `POP_EST`.
 
-Can we make a map that reflects world GDP? Yes! 
+**Can we make a map that reflects world GDP? Yes!** 
 
 ![Image 6](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/6-Tutorial-1.png)
 
-Close your attributes table. Right click your layer again, and go to Properties > Symbology. There you will find settings to change the styling of your map. 
+Close your attributes table. Right click your layer again, and go to **Properties > Symbology**. There you will find settings to change the styling of your map. 
 
-At the top, you can see that the settings are currently on Single Symbol settings. We want to change that to Graduated settings. This means you will be able to classify and represent your dataset according to an attribute, in our case: GDP. Under value, choose GDP_MD_EST. Then hit classify. 
+At the top, you can see that the settings are currently on Single Symbol settings. We want to change that to Graduated settings. This means you will be able to classify and represent your dataset according to an attribute, in our case: GDP. Under value, choose `GDP_MD_EST`. Then hit classify. 
 
 ![Image 7](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/7-Tutorial-1.png)
 
