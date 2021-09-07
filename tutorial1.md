@@ -47,7 +47,7 @@ Turn to your QGIS interface.
 
 The first thing you need to do is set your project **Coordinate Reference System** (more on this later!) Click on the bottom right corner (shown below), and search for **EPSG:4326** and click ok. 
 
-![Image 23](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/2-Tutorial-23.png)
+![Image 23](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/1-Tutorial-23.png)
 
 Move to the Google Drive > Tutorials > Tutorial 1 > [Data](https://drive.google.com/drive/folders/1WUO3lS13vYuyvtgiUEVwo1BOur4QrTiE), and download the `“Country-Boundaries-110”` file. Make sure to drag it into a designated folder. This dataset was downloaded from [Natural Earth](https://www.naturalearthdata.com/downloads/) where you can find a lot more datasets! 
 
@@ -73,7 +73,7 @@ The **Attributes Table** looks a lot like an excel sheet, and that’s because i
 
 ![Image 5](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/5-Tutorial-1.png)
 
-Scroll to the right of your attributes table, and you will find an attribute called `GDP_MD_EST`. This is shorthand for Estimated Gross Domestic Product in Million Dollars. `The GDP_YEAR` attribute indicates that the GDP estimate is for the year 2016. By clicking on the header, you can rearrange the dataset in ascending or descending order. Note that the country with the highest GDP 21,140,000 million USD, or add 6 zeros, about 21 trillion dollars. Note also, that there is an estimate for population size, under the attribute `POP_EST`.
+Scroll to the right of your attributes table, and you will find an attribute called `GDP_MD_EST`. This is shorthand for Estimated Gross Domestic Product in Million Dollars. `The GDP_YEAR` attribute indicates that the GDP estimate is for the year 2016. By clicking on the header, you can rearrange the dataset in ascending or descending order. Note that China, the country with the highest GDP 21,140,000 million USD, or add 6 zeros, about 21 trillion dollars. Note also, that there is an estimate for population size, under the attribute `POP_EST`.
 
 **Can we make a map that reflects world GDP? Yes!** 
 
