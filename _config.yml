@@ -11,4 +11,6 @@ navigation:
   - title: Setup
     url: setup
   - title: Tutorial 1
-    url: tutorial-1
+    url: tutorial1
+  - title: Tutorial 2
+    url: tutorial2
