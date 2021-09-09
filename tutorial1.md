@@ -164,17 +164,17 @@ So far, we’ve been seeing a “normal” map of the world in WGS84, which is t
 
 **Coordinate Reference System (CRS):** the method that QGIS uses to show the 3D surface of the globe on your 2D screen. Coordinate Reference Systems are very complicated, and it can take years to master them. It is important that our data is in the same CSR so that they line up on top of each other. There are two different types of CRS: 
 
-**1- Geographic CRS:** uses latitude and longitude coordinates to tell you where you are, based on differently shaped models of the globe. We’ll mostly be using WGS 84.
+**1- Geographic CRS:** uses latitude and longitude coordinates to tell you where you are, based on differently shaped models of the globe. We’ll mostly be using WGS84, which is incidentally what Google Maps also uses.
 
 **2- Projected CRS:** uses a mathematical algorithm to present the round earth on a flat map. Most common projected reference system is the Universal Transverse Mercator (UTM), which is fixed at the equator. 
 
 There’s a slight problem with projection systems! The earth’s surface is curved and not a perfect sphere, introducing elements of distortion. Coordinate reference systems are only approximations, and there are some trade offs to be made between preserving shape, distances, relative sizes or directions. 
 
-Please take a few minutes to read about projection systems [here](https://www.leventhalmap.org/digital-exhibitions/bending-lines/how-to-bend/projections/). Use the interactive projections tool to check out different distortions. WGS 84 is a Mercator projection, it looks like this. 
+Please take a few minutes to read about projection systems [here](https://www.leventhalmap.org/digital-exhibitions/bending-lines/how-to-bend/projections/). Use the interactive projections tool to check out different distortions.  
 
 ![Image 18](/Mapping-Global-Foodscapes/assets/img/Tutorial-1/18-Tutorial-1.png)
 
-Click on others including: Robinson, Sinusoidal, Mollweide, Bonne. We’ll explore representing our map with these projections. 
+Click on others including: Mercator, Robinson, Sinusoidal, Mollweide, Bonne. We’ll explore representing our map with these projections. 
 
 Before we start re-projecting our data, let’s add some grid lines. 
 
@@ -204,6 +204,7 @@ There are over 7000 projections in QGIS. Each is identified by a unique **Author
 &nbsp;**Sinusoidal:** ESRI:53008
 &nbsp;**Mollweide:** ESRI:53009
 &nbsp;**Bonne:** ESRI:53024
+&nbsp;**Mercator:** EPSG 3395
 
 Once you’ve experimented and you’re satisfied with a projection, close the window. Now we’re ready to export the map. We’ll cover the **Layout Panel** next tutorial, where we’ll learn to include a title, legend and scale bar. For now, take a screenshot of your Map Canvas. From your desktop, rename the file: LASTNAME_Tutorial_1 and upload it to the Tutorial 1 > [Output folder](https://drive.google.com/drive/folders/1gjJ8gSQffUpwS04EsPZkwrzP9fsaN6Zi). 
 
