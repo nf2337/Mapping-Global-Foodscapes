@@ -1,4 +1,140 @@
 # Tutorial 2
 -------------------------
 
-Coming Soon
+## Tutorial 2: Working with Historical Data
+
+## Objectives: 
+
+This tutorial aims to further introduce QGIS tools through the lens of working with historical datasets. We’ll be looking at one historical raster dataset, [Historical Croplands Dataset, 1700-1992](https://nelson.wisc.edu/sage/data-and-models/historic-croplands/index.php), and one historical vector dataset, [Historical Urban Population Growth Data](https://urbanization.yale.edu/data). 
+
+A lot of the politics of cartography is embedded in the datasets themselves. You might want to spend a few moments reading the documentation, or scan the summary of our data below.
+
+**Historical Croplands Dataset:** “To reconstruct historical croplands, we first compile an extensive database of historical cropland inventory data, at the national and subnational level, from a variety of sources. Then we use our 1992 cropland data within a simple land cover change model, along with the historical inventory data, to reconstruct global 5 min resolution data on permanent cropland areas from 1992 back to 1700. The reconstructed changes in historical croplands are consistent with the history of human settlement and patterns of economic development.”
+
+**Historical Urban Population Growth:** “The dataset was created by digitizing, transcribing, and geocoding historical, archaeological, and census-based urban population data previously published in tabular form by Tertius Chandler and George Modelski.”
+
+## Setup:
+
+Download the datasets for [tutorial 2](https://drive.google.com/drive/folders/15nv45-Sps_vrG1or5YcvK3t7elLuS8Ay). I did some processing to present you with a clean and easy to navigate information. 
+
+## QGIS Project File
+
+Open QGIS, and start a new project file. Save it in your designated folder. Remember! Always keep your files well structured. 
+
+## Set your CRS
+
+Set your project Coordinate Reference System (from the bottom right corner) to WGS 84 (ESPG:4326). 
+
+## Adding Raster Data: 
+
+Go to Layer > Add Layer > Add Raster Layer. Navigate to the Tutorial 2 folder > Croplands > glcrop1750_0.5.asc and click ok. You’ve added a raster file with data on global cropland cover for the year 1750. 
+
+![Image 1](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/1-Tutorial-2.png)
+
+The dataset will automatically be represented as a black and white gradient band showing values between 0 and 0.781. 0 represented uncultivated land, and 0.781 represents the most intensively cultivated cropland. If you zoom into certain locations, you will find that the dataset is very pixilated, and this is related to the Raster Resolution. When you right click on the layer, you will realize that there is no Open Attribute Table button, like other vector datasets used in previous tutorials. 
+
+## A bit about Raster Data:
+
+Raster data in GIS are a continuous layer of cells that represent features on, above or below the earth’s surface. Each cell in the raster grid is the same size, and cells are usually rectangular. Typical raster datasets include remote sensing data, such as aerial photography, or satellite imagery and modelled data, such as an elevation matrix. In our case, we are using modeled data. Unlike vector data, raster data typically do not have an associated database record for each cell. They are geocoded by pixel resolution and the x/y coordinate of a corner pixel of the raster layer. This allows QGIS to position the data correctly in the map canvas. You can read more about raster datasets [here](https://docs.qgis.org/2.8/en/docs/user_manual/working_with_raster/supported_data.html). 
+
+
+## Representing Raster Data: 
+
+![Image 2](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/2-Tutorial-2.png)
+
+In the Layers Panel, right click the layer > Properties > Symbology. The default Render Type is Singleband grey, we want to change that to Singleband pseudocolor. Leave the Min and Max values as is. Chose an appropriate color ramp to correspond to your spectrum of cropland cultivation. Click apply to check your results. You might also want to change the Color Rendering setting. I am going to increase the contrast of my colors. 
+
+Once satisfied with your colors and representation, you can save the style so it can easily reproduce it in the future. Style > Save Style, and save the .qml file as Cropland Style. 
+
+![Image 3](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/3-Tutorial-2.png)
+
+Now, go ahead and repeat these steps, adding the global cropland data first for 1850, then for 1950, and representing it as you’ve done above. When you turn to the Properties > Symbology, you can automatically go to Style > Load Style > and choose the file you saved above. 
+
+The only change you now have to make is with the Minimum and Maximum value. This is because for the 1750 dataset, the maximum value (ie. most intensively cultivated land) was 0.781. For 1850, change the maximum value to 0.908, and for 1950, change it to 1. 
+
+![Image 4](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/4-Tutorial-2.png)
+
+Since your 3 datasets are represented with a unified style, you can now compare and see changes across the span of 1750-1950 by manipulating the layer visibility options by checking and unchecking boxes. 
+
+## Adding a csv file: 
+
+A csv file, or comma-separated values, is a text file that contains information superheated by commas. A common way to access and edit a csv file is in excel or google sheets. Explore the dataset using google sheets [here](https://docs.google.com/spreadsheets/d/1KwWtysKfcsJWyy6JTcQ7t114jvUQasCueFAH3H0zyH4/edit?usp=drive_web&ouid=113394421580105564513).
+
+![Image 5](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/5-Tutorial-2.png)
+
+In urban populations csv file, take a few minutes to explore the columns. Each row represents a city, and the columns include population estimates for the years 1700-1975. Notice further that you have a column showing latitude and longitude, which specify the spatial location of the data. Because of this, you can automatically turn your .csv file into a points vector dataset in QGIS.
+
+![Image 6](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/6-Tutorial-2.png)
+
+Go back to QGIS, then press Layer > Add Delimited Text Layer. Press the […] to the right of File name, and navigate to your urban population dataset. Notice that QGIS has automatically recognized your Geometry Definition as Point coordinates, assigning the X field to Longitude, and the Y field to Latitude. Click add. 
+
+![Image 7](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/7-Tutorial-2.png)
+
+QGIS has automatically represented all the points in the dataset. However, we can choose to represent more specific subsets, according to year and size of the city. 
+
+![Image 8](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/8-Tutorial-2.png)
+
+Right click the layer > Properties > Symbology, and switch to the graduated symbol method. Then, for Value, choose Pop-1750. Explore the histogram briefly. You will notice that most values for population in 1750 are zero, in other words, these cities simply didn’t exist in 1750. In choosing your method of classification, you should make sure that cities with value zero don’t show up on your map.
+
+Chose your preferred color ramp. For mode, chose Natural Breaks (Jenks), and click Classify. If you click apply, you will see that there are still many dots - and many zero-value non-existing cities in 1750 appear. To change this, double click the Values tab of the first class. Change the lower value from 0.00 to 1.00 then click ok and apply. Notice now, there are far fewer dots on the map. 
+
+![Image 9](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/9-Tutorial-2.png)
+
+This is what your map currently looks like. It might be hard to read two separate sets of color gradients, the first showing global cropland, and the second showing population of cities. But there’s a solution! We’ll represent the size of the population not through color gradient, but through the size of the dot. 
+
+![Image 10](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/10-Tutorial-2.png)
+
+Right click the layer > Properties > Symbology and for Method, switch to Size. The Size from 1.00 to 8.00mm represents size gradient. I’ll switch to 1mm to 15mm. In the Natural Breaks mode, there are still too many prominent features on the map. I will switch to the Equal Interval mode. 
+
+![Image 11](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/11-Tutorial-2.png)
+
+You can also change the symbol style. Remember, you need to change each symbol individually. I’m going to make my circles light blue, decrease the opacity to 75% and I’ll remove the stroke. 
+
+![Image 12](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/12-Tutorial-2.png)
+
+You can also add a rule-based label to show what the major cities of 1750 are. Right click the layer > Properties > Labels. Switch to rule-based Labeling, double click the rule, add this expression: “Pop-1750" >= 420000, change the value to city, and edit the label styling. 
+
+When you’re done, save the layer style as Population-style in a designated folder. This will save both your symbology and labeling settings. 
+
+Now, it’s important to remember that you are still editing a .csv file, so you will lose the data if you save the file and reopen it. So you will need to save the layer as a GeoJSON file instead. 
+
+![Image 13](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/13-Tutorial-2.png)
+
+Right click the layer > Export > Save Features as. Make sure the format is geoJSON, and click the […] to identify a file extension. 
+
+Your new point layer is back to square zero in terms of symbology, but this can quickly be amended using our saved styles. 
+
+Right click the Urban-Population - Population1750-1975 layer, and click remove layer.
+Now, on right click the remaining “Urban-Populations” layer > Properties > Symbology > Load Style and select your file. Now you’ve returned to your desired settings. 
+
+Next, left click the layer, and Open Attributes Table. As you scroll through the table, remember that it’s this one vector file that contains data on the population from 1750-1950. All you need to do is make two duplicates of the layer, and change the symbology settings. 
+
+Left click the Urban Populations layer, and duplicate it twice. Now rename your layers Urban-Population-1750, Urban-Population-1850, Urban-Population-1950. You might want to further arrange your files in groups like this. To create a group, there’s a little add group icon under layers. 
+
+![Image 14](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/14-Tutorial-2.png)
+
+Now, change the symbology and labels of the 1850 layer. Left click the layer > Properties > Symbology. Just change the Value to Pop-1850. Then go to Labels > Rule > and just change the filter to "Pop-1850">= 420000. 
+
+Do the same with the 1950 layer, changing the symbology value and the label filter to 1950. 
+Now, there’s a lot of clutter on the 1950 map and there is no straightforward way to deal with this. What I will do is change the relative sizes of the symbols. Double click on the first class (1 - 140000) and change the symbol size to 1. Then continue to the second class (140000 - 280000) and change the symbol size to 2. Do the same for all 5. 
+
+![Image 15](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/15-Tutorial-2.png)
+The map looks a lot more coherent. Finally, we’ll turn to using the print layout.
+
+## Working with Print Layout
+
+Go to Project > New Print Layout and give it a name. 
+
+As you will soon learn, the layout editor is not the most robust tool in QGIS, and you’ll want to determine a good workflow for editing your maps depending on what your final product is and what software you want to use. We’ll be exporting multiple maps for the years 1750, 1850, 1950 separately as images, and we’ll bring them together and work on layouts in Google Slides. If you use Adobe Illustrator (that’s great!), you can edit all your data if you export as .svg file! You can read thorough documentation on the QGIS Layout editor [here](https://docs.qgis.org/3.4/en/docs/training_manual/map_composer/map_composer.html).
+
+
+
+
+
+
+
+
+
+
+
+ 
