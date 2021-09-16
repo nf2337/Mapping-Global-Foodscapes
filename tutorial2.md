@@ -62,15 +62,33 @@ A csv file, or comma-separated values, is a text file that contains information 
 
 ![Image 5](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/5-Tutorial-2.png)
 
-In urban populations csv file, take a few minutes to explore the columns. Each row represents a city, and the columns include population estimates for the years 1700-1975. Notice further that you have a column showing latitude and longitude, which specify the spatial location of the data. Because of this, you can automatically turn your .csv file into a points vector dataset in QGIS.
+In urban populations csv file, take a few minutes to explore the dataset. Each row represents a city, and the columns include population estimates for the years 1700-1975. This is shown both as the actual population size and the population rank. Look for Istanbul. In 1700, it's population was 700,000 people, while its population rank was 1. Istanbul, or Constantinople as it was known to its Ottoman rulers at the time, was the largest city in the world in 1700. 
+
+Try to rearrange the dataset according to population rank in 1950. To do this, hover on the right corner of the cell R1, click the small downward pointing arrow, and chose Sort Sheet A > Z. 
+
+![Image 16](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/16-Tutorial-2.png)
+
+What was the largest city then? How many people lived there? 
+
+(answer: Philadelphia, 17,600,000)
+
+There might be some cities where the population is zero. This likely means that there is no recorded data for its inhabitants in that year. The rank will also be blank, or "null". 
+
+Notice further that you have a column showing latitude and longitude, which specify the spatial location of the data. Because of this, you can automatically turn your .csv file into a points vector dataset in QGIS.
 
 ![Image 6](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/6-Tutorial-2.png)
 
-Go back to QGIS, then press Layer > Add Delimited Text Layer. Press the […] to the right of File name, and navigate to your urban population dataset. Notice that QGIS has automatically recognized your Geometry Definition as Point coordinates, assigning the X field to Longitude, and the Y field to Latitude. Click add. 
+Go back to QGIS, then press Layer > Add Delimited Text Layer. Press the […] to the right of File name, and navigate to your urban population dataset. Notice that QGIS has automatically recognized your Geometry Definition as Point coordinates, assigning the X field to Longitude, and the Y field to Latitude. This means that it will position your points in space according to the listed latitutude and logitude coordinates, creating a vector points file with all the information from your CSV file. Click add. 
 
 ![Image 7](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/7-Tutorial-2.png)
 
-QGIS has automatically represented all the points in the dataset. However, we can choose to represent more specific subsets, according to year and size of the city. 
+QGIS has automatically represented all the points in the dataset. However, we can choose to represent more specific subsets, according to year and population size or rank. 
+
+Before we do that - always remember to save your CSV layers before you start editting. In the Layers Panel, right click the layer > Export > Save Features As > click the [...] to identify a file name and location. Make sure your format is GeoJSON, and click ok. 
+
+![Image 17](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/17-Tutorial-2.png)
+
+Now you have two identical layers, one called Urban-Populations, and the other called Urban-Populations - Population1750-1975. You want to remove the second (old one), by left clicking the layer > remove layer. 
 
 ![Image 8](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/8-Tutorial-2.png)
 
