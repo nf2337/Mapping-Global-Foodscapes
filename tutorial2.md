@@ -136,9 +136,7 @@ Now, the process of symbolizing for 1850 and 1950 will be seemless. From the lay
 
 Do the same with the 1950 layer, changing the symbology value and the label filter to 1950. 
 
-![Image 15](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/15-Tutorial-2.png)
-
-The map looks a lot more coherent. Finally, we’ll turn to using the print layout.
+Now you can switch layers on and off to compare between cropland and urban populations in 1750, 1850, and 1950. 
 
 ## Working with Print Layout
 
