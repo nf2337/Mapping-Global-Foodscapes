@@ -98,11 +98,23 @@ Chose your preferred color ramp. For mode, chose Natural Breaks (Jenks), and cli
 
 ![Image 9](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/9-Tutorial-2.png)
 
-This is what your map currently looks like. It might be hard to read two separate sets of color gradients, the first showing global cropland, and the second showing population of cities. But there’s a solution! We’ll represent the size of the population not through color gradient, but through the size of the dot. 
+This is what your map currently looks like. It might be hard to read two separate sets of color gradients, the first showing global cropland, and the second showing population of cities. Furthermore, there are way too many dots on the map, and it obscures the background layer. Let's try something different with the symbology. Specifically, we'll represent the relative sizes of cities and populations by size of dots, not colors. We will also use the population rank feature. 
 
 ![Image 10](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/10-Tutorial-2.png)
 
-Right click the layer > Properties > Symbology and for Method, switch to Size. The Size from 1.00 to 8.00mm represents size gradient. I’ll switch to 1mm to 15mm. In the Natural Breaks mode, there are still too many prominent features on the map. I will switch to the Equal Interval mode. 
+Right click the layer > Properties > Symbology. Switch your Value to Pop-1750 Rank, and your Method to Size. Note the Size from 11mm to 1mm, and increase the number of classes to 11. 
+
+We'll manually identify the values to make the largest dot symbol represet the most populated city in 1750, the second largest dot symbol to represent the second most populated city in 1750, and so forth. 
+
+Before we do that, let's set the standards for the symbol style. Click the Symbol tab, and make your desired chages. I've decreased the opacity to 75%, changed the color to light blue, and removed the outline. Click Ok. 
+
+![Image 18](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/18-Tutorial-2.png)
+
+Now, we'll manually adjust the values to get our desired results. This will take a bit of time, so please be patient. Double click on the values, and adjust the class bounds for each to look like this. The size of each dot symbol will manually correspond to its rank, displaying only the 10 largest cities, and the rest as very small dots.
+
+![Image 19](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/19-Tutorial-2.png)
+
+Now, your map looks like this! Great. Let's add some labels. 
 
 ![Image 11](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/11-Tutorial-2.png)
 
