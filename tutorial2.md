@@ -15,7 +15,7 @@ A lot of the politics of cartography is embedded in the datasets themselves. You
 
 ## Setup:
 
-Download the datasets for [tutorial 2](https://drive.google.com/drive/folders/15nv45-Sps_vrG1or5YcvK3t7elLuS8Ay). I did some processing to present you with a clean and easy to navigate information. 
+Download the datasets for [tutorial 2](https://drive.google.com/drive/folders/15nv45-Sps_vrG1or5YcvK3t7elLuS8Ay) (Only the Croplands folder and the Urban-Populations file, ignore the sheet that says ONLY FOR PREVIEW) . I did some processing to present you with a clean and easy to navigate information. 
 
 ## QGIS Project File
 
@@ -207,6 +207,10 @@ Back to Layouts > Layout Manager. Create a duplicate called 1950, and follow the
 Onto the very last step.
 
 ## Add all 3 maps together 
+
+Open the [Google Slides Ouput deck](https://docs.google.com/presentation/d/1UjSgS-SyFlNnhPNvhzY9OqhjWUD77j7W-kwhR0G1xJs/edit#slide=id.p) and add your three maps together like I've done. Include the years and your name using the text tool 
+
+That's it! Until next time! 
 
 
 
