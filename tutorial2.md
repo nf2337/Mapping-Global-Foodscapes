@@ -144,6 +144,93 @@ Go to Project > New Print Layout and give it a name.
 
 As you will soon learn, the layout editor is not the most robust tool in QGIS, and you’ll want to determine a good workflow for editing your maps depending on what your final product is and what software you want to use. We’ll be exporting multiple maps for the years 1750, 1850, 1950 separately as images, and we’ll bring them together and work on layouts in Google Slides. If you use Adobe Illustrator (that’s great!), you can edit all your data if you export as .svg file! You can read thorough documentation on the QGIS Layout editor [here](https://docs.qgis.org/3.4/en/docs/training_manual/map_composer/map_composer.html).
 
+## The Print Layout Interface
+
+![Image 20](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/20-Tutorial-2.png)
+
+You will be using the project file and the layout interface in conjunction with each other. Practice switching between the two interfaces. 
+
+1. The toolbox: this is where you'll be able to add the map, legend, scale bar, and other features to your map. 
+
+2. The map canvas: this is where your map layout itens will appear. 
+
+3. Dialogue box: this is where you'll be able to edit specific items in your layout. You might want to close everything except the item properties tab. 
+
+## Adding your map
+
+![Image 21](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/21-Tutorial-2.png)
+
+Click the Add Map button, and drag it across the space of the canvas. You'll notice that it will automatically display the map according the settings defined in your project file. To export 1750 seperately, go to your project interace, and make sure that only your 1750 group is turned on, and that 1850 and 1950 are hidden. Aditionally, right click the layer > Zoom to group to adjust the extent of your map. 
+
+Return to the layout file, and press Refresh. Now only your 1750 map appears in layout mode. You want to adjust the scale and the placement of the map. To do this, change the scale of the map by adjusting the numerical value in the Main Properties tab. The smaller the value, the more zoomed in your map is. You can do this with a bit of trial and error. Try pasting 75000000 into the scale. Once your satisfied, you can move the placement of the map using the Move Item content botton in your toolbox.
+
+Finally, from your toolbox, add the Scalebar and draw it on the bottom left corner. As you see, there's a lot of information we don't need, and we'll do some work to adjust the formatting to communicate our data as swiftly as possible. 
+
+From the toolbox, use the Select/Move Items to click on the Legend. It will appear in your Main Properties tab on the right. 
+
+![Image 22](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/22-Tutorial-2.png)
+
+Scroll down to the Legend Items. Unclick the Auto Update, and tick the Only show items inside linked map buttom. This will remove the lenged items for the yars 1850 and 1950, which are not currently displayed on the map. 
+
+Using the remove selected items button, remove all the dot symbols, just keep the 4-5 one. Further remove the Band 1 item. Next, we'll change the labels that appear on the legend. Double click the 1750, which will allow you to change the Legend Item Properties. Type The world in 1750, and press return. Change all the legend labels, here's what I've done. 
+
+![Image 23](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/23-Tutorial-2.png)
+
+Finally, we'll edit the gradient of our crop coverage. Double click the gradient. Change the Height to 40mm. Under Labels, Change Minimum to Low Cultivation, and Maximim to High Cultivation. These labels make more sense than abstract numerical values. Go back. 
+
+![Image 24](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/24-Tutorial-2.png)
+
+Scroll down in the Legend panel. You'll notice you can edit the fonts, spacing, position, rotation, and much more. Under Symbol, I'm just going to untick the Draw stroke for raster symbols option, and untick the background. 
+
+Finally, using from the toolbox, click the Select/Move items feature to move your Legend around, and make some final adjustments. 
+
+This is what my map looks like! 
+
+![Image 25](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/25-Tutorial-2.png)
+
+Now we'll export this as an image. Go to Layout > Export as Image. Give your file a name and location, and save it. 
+
+That's it for the 1750 map. Now we'll want to do the same for the 1850 and 1950 map. 
+
+![Image 26](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/26-Tutorial-2.png)
+
+Go to Layouts > Layout Manager. Rename your layout 1750, and create a duplicate called 1850. 
+
+Now make sure your on the 1850 layout. Go back to your map project file (remember, that's the one where you add data and change the properties). From there, unclick the 1750 group, and click the 1850 group. Right click > Zoom to Group. Return to the 1850 layout manager. Click Select/Move Item > click the Map and in the Main Properties, click Refresh.
+
+The data will change, but so will the Legend. We'll just delete the legend for now. Click the legend, and back space to delete it. 
+
+Now we'll export the 1850 map as an image. Go to Layout > Export as Image. Give your file a name and location, and save it. 
+
+Back to Layouts > Layout Manager. Create a duplicate called 1950, and follow the same steps above to make an image of the 1950 map. 
+
+Onto the very last step.
+
+## Add all 3 maps together 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
