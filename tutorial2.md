@@ -132,12 +132,12 @@ Left click the Urban Populations layer, and duplicate it twice. Now rename your 
 
 ![Image 14](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/14-Tutorial-2.png)
 
-Now, change the symbology and labels of the 1850 layer. Left click the layer > Properties > Symbology. Just change the Value to Pop-1850. Then go to Labels > Rule > and just change the filter to "Pop-1850">= 420000. 
+Now, the process of symbolizing for 1850 and 1950 will be seemless. From the layers panel, left click the Urban-Populations-1850 layer > Properties > Symbology. Change only the Value to Pop Rank 1850. Then go to Labels > Rule > and just change the filter to 10 >= "Pop-1850 Rank" >= 1. 
 
 Do the same with the 1950 layer, changing the symbology value and the label filter to 1950. 
-Now, there’s a lot of clutter on the 1950 map and there is no straightforward way to deal with this. What I will do is change the relative sizes of the symbols. Double click on the first class (1 - 140000) and change the symbol size to 1. Then continue to the second class (140000 - 280000) and change the symbol size to 2. Do the same for all 5. 
 
 ![Image 15](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/15-Tutorial-2.png)
+
 The map looks a lot more coherent. Finally, we’ll turn to using the print layout.
 
 ## Working with Print Layout
