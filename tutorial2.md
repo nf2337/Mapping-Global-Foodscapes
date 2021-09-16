@@ -116,28 +116,17 @@ Now, we'll manually adjust the values to get our desired results. This will take
 
 Now, your map looks like this! Great. Let's add some labels. 
 
-![Image 11](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/11-Tutorial-2.png)
-
-You can also change the symbol style. Remember, you need to change each symbol individually. I’m going to make my circles light blue, decrease the opacity to 75% and I’ll remove the stroke. 
-
 ![Image 12](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/12-Tutorial-2.png)
 
-You can also add a rule-based label to show what the major cities of 1750 are. Right click the layer > Properties > Labels. Switch to rule-based Labeling, double click the rule, add this expression: “Pop-1750" >= 420000, change the value to city, and edit the label styling. 
+You can also add a rule-based label to show  the top 10 most populated cities of 1750. Right click the layer > Properties > Labels. Switch to rule-based Labeling, double click the rule, add this expression: 10 >= "Pop-1750 Rank" >= 1, change the value to city, and edit the label styling. 
 
-When you’re done, save the layer style as Population-style in a designated folder. This will save both your symbology and labeling settings. 
+When you’re done, save the layer style as Population-style in a designated folder. This will save both your symbology and labeling settings for future use. 
 
-Now, it’s important to remember that you are still editing a .csv file, so you will lose the data if you save the file and reopen it. So you will need to save the layer as a GeoJSON file instead. 
+This is what your map looks like! Now, let's make the same representation for urban populations in 1850 and 1950. 
 
 ![Image 13](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/13-Tutorial-2.png)
 
-Right click the layer > Export > Save Features as. Make sure the format is geoJSON, and click the […] to identify a file extension. 
-
-Your new point layer is back to square zero in terms of symbology, but this can quickly be amended using our saved styles. 
-
-Right click the Urban-Population - Population1750-1975 layer, and click remove layer.
-Now, on right click the remaining “Urban-Populations” layer > Properties > Symbology > Load Style and select your file. Now you’ve returned to your desired settings. 
-
-Next, left click the layer, and Open Attributes Table. As you scroll through the table, remember that it’s this one vector file that contains data on the population from 1750-1950. All you need to do is make two duplicates of the layer, and change the symbology settings. 
+Left click the layer, and Open Attributes Table. As you scroll through the table, remember that it’s this one vector file that contains data on the population from 1750-1950. All you need to do is make two duplicates of the layer, and change the symbology settings. 
 
 Left click the Urban Populations layer, and duplicate it twice. Now rename your layers Urban-Population-1750, Urban-Population-1850, Urban-Population-1950. You might want to further arrange your files in groups like this. To create a group, there’s a little add group icon under layers. 
 
