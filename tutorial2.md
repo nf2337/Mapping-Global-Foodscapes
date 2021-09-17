@@ -77,7 +77,9 @@ Notice further that you have a column showing latitude and longitude, which spec
 
 ![Image 6](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/6-Tutorial-2.png)
 
-Go back to QGIS, then press **Layer > Add Delimited Text Layer**. Press the **[…]** to the right of File name, and navigate to your urban population dataset. Notice that QGIS has automatically recognized your Geometry Definition as Point coordinates, assigning the X field to Longitude, and the Y field to Latitude. This means that it will position your points in space according to the listed latitutude and logitude coordinates, creating a vector points file with all the information from your CSV file. Click add. 
+Go back to QGIS, then press **Layer > Add Delimited Text Layer**. Press the **[…]** to the right of File name, and navigate to your urban population dataset. Notice that QGIS has automatically recognized your Geometry Definition as Point coordinates, assigning the X field to Longitude, and the Y field to Latitude. Make sure the **Geometry CSR** is set to ESPG:4326 - WGS 84. 
+
+QGIS will position your points in space according to the listed latitutude and logitude coordinates, creating a vector points file with all the information from your CSV file. Click add. 
 
 ![Image 7](/Mapping-Global-Foodscapes/assets/img/Tutorial-2/7-Tutorial-2.png)
 
