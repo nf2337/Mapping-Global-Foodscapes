@@ -242,7 +242,7 @@ WHERE a.ISO_A3 != b.ISO_A3
 
 You may want to also duplicate the World-Map, Join tables with the tomato, reproduce the centroids, change the symbology and labels, etc. 
 
-![Image 22](/Mapping-Global-Foodscapes/assets/img/Tutorial-3/1-Tutorial-3.png)
+![Image 22](/Mapping-Global-Foodscapes/assets/img/Tutorial-3/22-Tutorial-3.png)
 
 The central issue is that there is scalar. Migrants are coming to Spain most from Morocco, Romania, and countries in South America and the Caribbean. While Spain is producing Tomato (along with other fruits and vegetables), predominantly for the European Union. You’ll want to export your maps at different scales, and somehow arrange them to make a point about the scale and geographies of flow that make the Spanish tomato placeless. 
 
