@@ -105,7 +105,7 @@ Go to Layers > Add Layer > Add/Edit Virtual Layer. Here, we’ll instruct QGIS t
 
 Copy and paste the below into the Query, the click Add:
 
-SELECT Origin_ISO, Destination_ISO, Migrant_Percent1,
+`SELECT Origin_ISO, Destination_ISO, Migrant_Percent1,
        make_line(a.geometry, b.geometry)
 
 FROM 'Spain-Immigration'
@@ -114,7 +114,7 @@ JOIN 'Centroids' a ON 'Spain-Immigration'.Origin_ISO = a.ISO_A3
 
 JOIN 'Centroids' b ON 'Spain-Immigration'.Destination_ISO = b.ISO_A3
 
-WHERE a.ISO_A3 != b.ISO_A3
+WHERE a.ISO_A3 != b.ISO_A3`
 
 ![Image 10](/Mapping-Global-Foodscapes/assets/img/Tutorial-3/10-Tutorial-3.png)
 
