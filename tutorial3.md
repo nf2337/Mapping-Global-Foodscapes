@@ -225,7 +225,7 @@ Back to QGIS.
 
 3) Layer > Add Layer > Add Virtual Layer. In the Query, add the following. Note that I am changing some things.
 
-```ruby SELECT Origin_ISO, Destination_ISO, Trade_Percent1,
+```SELECT Origin_ISO, Destination_ISO, Trade_Percent1,
        make_line(a.geometry, b.geometry)
 
 FROM 'Spain-Immigration'
@@ -234,8 +234,8 @@ JOIN 'Centroids' a ON 'Spain-Immigration'.Origin_ISO = a.ISO_A3
 
 JOIN 'Centroids' b ON 'Spain-Immigration'.Destination_ISO = b.ISO_A3
 
-WHERE a.ISO_A3 != b.ISO_A3
-```
+WHERE a.ISO_A3 != b.ISO_A3```
+
 
 4) Save your virtual layer as a GeoJSON called Spain_Tomato_Flow 
 
