@@ -53,13 +53,13 @@ To see the results, we’ll go back to the Layers Panel, right click the World-M
 
 ![Image 4](/Mapping-Global-Foodscapes/assets/img/Tutorial-3/4-Tutorial-3.png)
 
-Notice that the fields from your .csv file, Spain-Immigration, are now part of the attribute table of the World-Map vector file. This is the result of our table join. 
+Notice that the fields from your .csv file, Spain-Immigration, are now part of the **attribute table** of the **World-Map** vector file. This is the result of our table join. 
 
 Now, rearrange your table by double clicking on the header of the Immigration_Destination, and all the top ten countries with migrants to Spain have appeared. Note that the NULL values are given to all other countries. That’s fine!
 
-A small step here. Double click on the Immigration_Migration-Percentage field. You’ll notice that QGIS doesn’t arrange the numbers properly. This is because it’s currently registered our numbers as text. We’ll need to recalculate these fields. 
+A small step here. Double click on the **Immigration_Migration-Percentage** field. You’ll notice that QGIS doesn’t arrange the numbers properly. This is because it’s currently registered our numbers as text. We’ll need to recalculate these fields. 
 
-Go back to the Layers Panel, right click the Spain-Immigration, and Open Attribute Table. Click the field calculator at the top. For Output field name, write Migrant-Value. For Output field type, choose Decimal number (real). In the right hand corner, scroll to Fields and Values, then double-click Spain-Immigration_Migrant_Value so that it appears in the Expression window. Press Ok. 
+Go back to the Layers Panel, right click the **Spain-Immigration**, and **Open Attribute Table**. Click the **field calculator** at the top. For Output field name, write **Migrant-Value**. For Output field type, choose Decimal number (real). In the right hand corner, scroll to Fields and Values, then double-click **Spain-Immigration_Migrant_Value** so that it appears in the Expression window. Press Ok. 
 
 ![Image 5](/Mapping-Global-Foodscapes/assets/img/Tutorial-3/5-Tutorial-3.png)
 
@@ -69,7 +69,7 @@ Now that we’re done, we’ll just delete the fields we don’t need. Click the
 
 ![Image 6](/Mapping-Global-Foodscapes/assets/img/Tutorial-3/6-Tutorial-3.png)
 
-Go back to the Layers Panel, right click the World-Map > Open Attributes Table, and see the changes reflected there. Notice, that the .csv Spain-Immigration and the vector World-Map are dynamically linked. 
+Go back to the Layers Panel, right click the **World-Map > Open Attributes Table,** and see the changes reflected there. Notice, that the .csv Spain-Immigration and the vector World-Map are dynamically linked. 
 
 Visualizing Migration Data 
 
@@ -83,25 +83,25 @@ Need some help? Make changes reflected below:
 
 Notice that you’re only displaying the top 10 countries from which migrants to Spain originate. If you want to display the rest of the world, that’s easy. 
 
-From your Layers Panel, right click World-Map, and duplicate the layer. Rename it basemap. Now, right click basemap > Properties > Symbology, and revert to Single Symbol, and change the fill. I changed mine to diagonal lines. 
+From your Layers Panel, right click World-Map, and duplicate the layer. Rename it basemap. Now, right click **Basemap > Properties > Symbology, and revert to Single Symbol**, and change the fill. I changed mine to diagonal lines. 
 
 Here’s what you should have so far. 
 
 ![Image 8](/Mapping-Global-Foodscapes/assets/img/Tutorial-3/8-Tutorial-3.png)
 
-Mapping Flow
+## Mapping Flow
 
 Please note that this part of the tutorial is from Anita Graser’s [Free and Open Source GIS Ramblings](https://anitagraser.com/2019/05/04/flow-maps-in-qgis-no-plugins-needed/)
 
-What if, instead of a chloropleth map, I want actual arrows showing the flow to Spain. Let’s look at how to do that! 
+What if, instead of a c**hloropleth map**, I want actual arrows showing the flow to Spain. Let’s look at how to do that! 
 
-First, we’ll need to turn out polygons of countries into a series of points, from which we can map flow. For this, go to Vector > Geometry Tool > Centroids. For Input Layer, choose the Basemap, then Run it. 
+First, we’ll need to turn out polygons of countries into a series of points, from which we can map flow. For this, go to **Vector > Geometry Tool > Centroids**. For **Input Layer**, choose the Basemap, then Run it. 
 
 ![Image 9](/Mapping-Global-Foodscapes/assets/img/Tutorial-3/9-Tutorial-3.png)
 
-Now you have an additional layer called Centroids, which is dots that QGIS has placed in the middle of each country polygon. 
+Now you have an additional layer called **Centroids**, which is dots that QGIS has placed in the middle of each country polygon. 
 
-Go to Layers > Add Layer > Add/Edit Virtual Layer. Here, we’ll instruct QGIS to make a series of lines connecting the dots to reveal migration flows.
+Go to **Layers > Add Layer > Add/Edit Virtual Layer**. Here, we’ll instruct QGIS to make a series of lines connecting the dots to reveal migration flows.
 
 Copy and paste the below into the Query, the click Add:
 
@@ -225,7 +225,7 @@ Back to QGIS.
 
 3) Layer > Add Layer > Add Virtual Layer. In the Query, add the following. Note that I am changing some things.
 
-```SELECT Origin_ISO, Destination_ISO, Trade_Percent1,
+```js SELECT Origin_ISO, Destination_ISO, Trade_Percent1,
        make_line(a.geometry, b.geometry)
 
 FROM 'Spain-Immigration'
@@ -234,8 +234,8 @@ JOIN 'Centroids' a ON 'Spain-Immigration'.Origin_ISO = a.ISO_A3
 
 JOIN 'Centroids' b ON 'Spain-Immigration'.Destination_ISO = b.ISO_A3
 
-WHERE a.ISO_A3 != b.ISO_A3```
-
+WHERE a.ISO_A3 != b.ISO_A3
+```
 
 4) Save your virtual layer as a GeoJSON called Spain_Tomato_Flow 
 
