@@ -11,7 +11,7 @@ This tutorial aims to introduce ways of mapping flows (of people and goods) thro
 
 Download the datasets for [tutorial 3](https://drive.google.com/drive/folders/1j0DYACcxkfmfbSWEjYm542Wpw1XNJnOA). 
 
-Open QGIS, and start a new project file. Save it in your designated folder. Remember! Always keep your files well structured. Set your project Coordinate Reference System (from the bottom right corner) to WGS 84 (ESPG:4326).
+Open QGIS, and start a new project file. Save it in your designated folder. Remember! Always keep your files well structured. Set your project Coordinate Reference System (from the bottom right corner) to **WGS 84 (ESPG:4326)**.
 
 ## Performing Table Joins: 
 
@@ -21,15 +21,15 @@ In this tutorial, we’ll look at another way to turn tabular data into maps thr
 
 ## Adding the datasets: 
 
-Go to Layer > Add Vector Layer and chose your World-Map. 
+Go to **Layer > Add Vector Layer** and chose your World-Map. 
 
-Then, go to Layer > Add Delimited Text Layer and add your Spain-Immigration.csv file. Note that under Geometry Definition, you want to keep it at No geometry (attribute only table). 
+Then, go to **Layer > Add Delimited Text Layer** and add your **Spain-Immigration.csv file**. Note that under **Geometry Definition**, you want to keep it at **No geometry** (attribute only table). 
 
 ![Image 1](/Mapping-Global-Foodscapes/assets/img/Tutorial-3/1-Tutorial-3.png)
 
 ## Exploring the datasets: 
 
-Right click each layer, and Open Attribute Table. 
+Right click each layer, and **Open Attribute Table**. 
 
 ![Image 2](/Mapping-Global-Foodscapes/assets/img/Tutorial-3/2-Tutorial-3.png)
 
@@ -37,17 +37,17 @@ Let’s first explore the Spain-Immigration table. This was downloaded from [her
 
 You’ll notice there are 10 rows of data, each representing the number and percentage of migrants going from the origin (Morocco, Romania, Colombia, etc) to one destination, Spain. Note that the percentages don’t add up to 100, this is because I’ve selected from the original dataset only the top 10 migrant flows to Spain. 
 
-Next, consider the World-Map. It contains only names and ISO (International Organization for Standardization) country codes. 
+Next, consider the **World-Map**. It contains only names and ISO (International Organization for Standardization) country codes. 
 
-The ISO is an attribute of both the World-Map (a vector file), and the Spain-Immigration (a .csv) file. Based on this shared attribute, we can join the datasets, and start visualizing the migration information on a map. 
+The ISO is an attribute of both the World-Map (a vector file), and the **Spain-Immigration** (a .csv) file. Based on this shared attribute, we can join the datasets, and start visualizing the migration information on a map. 
 
 ## Table Joins: 
 
-In the Layers Panel, right click the World-Map > Properties > Joins. Click + and choose the below settings: 
+In the Layers Panel, right click the **World-Map > Properties > Joins**. Click + and choose the below settings: 
 
 ![Image 3](/Mapping-Global-Foodscapes/assets/img/Tutorial-3/3-Tutorial-3.png)
 
-Join layer is the layer we’re joining to our vector map. This will be Spain-Immigration. Join field is the shared attribute from the table. We’ll chose Origin ISO. Target field is the shared attribute from the vector. We’ll choose ISO_A3. Click Ok. 
+Join layer is the layer we’re joining to our vector map. This will be **Spain-Immigration**. Join field is the shared attribute from the table. We’ll chose **Origin ISO**. Target field is the shared attribute from the vector. We’ll choose **ISO_A3**. Click Ok. 
 
 To see the results, we’ll go back to the Layers Panel, right click the World-Map > Open Attribute Table. 
 
