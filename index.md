@@ -16,7 +16,7 @@ Please follow the steps patiently and diligently so you don't run into any error
 
 ### [Tutorial 2](https://nf2337.github.io/Mapping-Global-Foodscapes/tutorial2) / Working with Historical Data
 
-### [Tutorial 3](https://nf2337.github.io/Mapping-Global-Foodscapes/tutorial3) / Finding your own Datasets
+### [Tutorial 3](https://nf2337.github.io/Mapping-Global-Foodscapes/tutorial3) / Mapping Flow
 
 ### [Tutorial 4](https://nf2337.github.io/Mapping-Global-Foodscapes/tutorial4) / Using Satellite Images and Remote Sensing 
 
