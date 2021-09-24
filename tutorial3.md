@@ -225,7 +225,8 @@ Back to QGIS.
 
 3) Layer > Add Layer > Add Virtual Layer. In the Query, add the following. Note that I am changing some things.
 
-```js SELECT Origin_ISO, Destination_ISO, Trade_Percent1,
+```javascript 
+SELECT Origin_ISO, Destination_ISO, Trade_Percent1,
        make_line(a.geometry, b.geometry)
 
 FROM 'Spain-Immigration'
