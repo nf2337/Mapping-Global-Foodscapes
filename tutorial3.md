@@ -105,6 +105,7 @@ Go to **Layers > Add Layer > Add/Edit Virtual Layer**. Here, we’ll instruct QG
 
 Copy and paste the below into the Query, the click Add:
 
+```javascript 
 SELECT Origin_ISO, Destination_ISO, Migrant_Percent1,
        make_line(a.geometry, b.geometry)
 
@@ -115,25 +116,27 @@ JOIN 'Centroids' a ON 'Spain-Immigration'.Origin_ISO = a.ISO_A3
 JOIN 'Centroids' b ON 'Spain-Immigration'.Destination_ISO = b.ISO_A3
 
 WHERE a.ISO_A3 != b.ISO_A3
+```
 
 ![Image 10](/Mapping-Global-Foodscapes/assets/img/Tutorial-3/10-Tutorial-3.png)
 
-While this query looks complicated, it’s telling QGIS to make lines between points, connecting the Origin_ISO to the Destination_ISO, and adding the attribute Migrant_Percent, showing the percentage of migrants from each country of origin (we’ll use this to visualize the data in a second). 
+While this query looks complicated, it’s telling QGIS to make lines between points, connecting the **Origin_ISO** to the **Destination_ISO**, and adding the **attribute Migrant_Percent**, showing the percentage of migrants from each country of origin (we’ll use this to visualize the data in a second). 
 
 Re-arrange your layers to bring the new virtual_layer to the top, and this is what they should look like. 
 
 ![Image 11](/Mapping-Global-Foodscapes/assets/img/Tutorial-3/11-Tutorial-3.png)
 
-Your virtual_Layer is temporary, so before we go on to styling, you’ll want to save it as a geoJSON. Right click the layer > Export > Save Features As. Give your file a name and location, make sure the CSR is defines as WGS 84, and save it. Now remove the virtual_layer, and keep the permanent Spain_Immigration_Flow layer. 
+Your **virtual_Layer** is temporary, so before we go on to styling, you’ll want to save it as a geoJSON. Right click the **layer > Export > Save Features** As. Give your file a name and location, make sure the CSR is defines as WGS 84, and save it. Now remove the virtual_layer, and keep the permanent **Spain_Immigration_Flow layer**. 
 
 ![Image 12](/Mapping-Global-Foodscapes/assets/img/Tutorial-3/12-Tutorial-3.png)
 
-Let’s style. Right click the layer > Properties > Symbology. Keep it at Single Symbol, click Simple Line, and for Symbol layer type, change to Geometry Generator. 
+Let’s style. Right click the **layer > Properties > Symbology**. Keep it at Single Symbol, click Simple Line, and for Symbol layer type, change to Geometry Generator. 
 
 ![Image 13](/Mapping-Global-Foodscapes/assets/img/Tutorial-3/13-Tutorial-3.png)
 
-Copy paste the following into the equation. This will simply make your lines bend. For Geometry type, chose LineString / MultiLineString.
+Copy paste the following into the equation. This will simply make your lines bend. For **Geometry type**, chose **LineString / MultiLineString**.
 
+```javascript 
 difference(
    difference(
       make_line(
@@ -150,31 +153,37 @@ difference(
    ),
    buffer(end_point( $geometry), 0.01)
 )
+```
 
 ![Image 14](/Mapping-Global-Foodscapes/assets/img/Tutorial-3/14-Tutorial-3.png)
 
-Then, click the Simple Line indicated above, and in Symbol layer type, change to arrow. Here, we’ll use our data to make the arrow width correspond to the percentage of migrants from each country. This will take a second. 
+Then, click the **Simple Line** indicated above, and in **Symbol layer type**, change to arrow. Here, we’ll use our data to make the arrow width correspond to the percentage of migrants from each country. This will take a second. 
 
-For each of Arrow width, Arrow width at start, Head length and Head thickness, right click the dropdown menu on the right, and choose Assistant. 
+For each of **Arrow width, Arrow width at start, Head length and Head thickness**, right click the dropdown menu on the right, and choose Assistant. 
 
-In assistant, you’ll chose the source as Migrant_Percent1, click refresh. This indicates that the value is pulling from your percentage of migrants. Then add size from 0.5 to 7, and change scale method to Linear.
+In assistant, you’ll chose the source as **Migrant_Percent1**, click refresh. This indicates that the value is pulling from your percentage of migrants. Then add size from 0.5 to 7, and change scale method to Linear.
 
 ![Image 15](/Mapping-Global-Foodscapes/assets/img/Tutorial-3/15-Tutorial-3.png)
 
-You’ll have to do this for all four categories. Now, you’re almost done. Click on the Simple Fill. Remove the stroke (No Pen), and change the color and opacity. Using apply, check that everything is working. If yes, be sure to save your style, and call it Spain-Flow-Style. 
+You’ll have to do this for all four categories. Now, you’re almost done. Click on the **Simple Fill**. Remove the stroke (No Pen), and change the color and opacity. Using apply, check that everything is working. If yes, be sure to save your style, and call it **Spain-Flow-Style**. 
 
 ![Image 16](/Mapping-Global-Foodscapes/assets/img/Tutorial-3/16-Tutorial-3.png)
 
 Now your map is almost complete. We’ll just change the points so they reflect only our 10 countries of interest. 
 
-From the Layers Panel, right click the Centroids layer > Properties > Symbology. Then change the symbology to Rule-based. There, Add a rule. In the filter, paste the following formula  "Spain-Immigration_Migrant_Percent1" >= 0 and change the styling. 
+From the Layers Panel, right click the **Centroids layer > Properties > Symbology**. Then change the symbology to Rule-based. There, Add a rule. In the filter, paste the following formula  then change the styling: 
+
+```
+"Spain-Immigration_Migrant_Percent1" >= 0
+```
 
 ![Image 17](/Mapping-Global-Foodscapes/assets/img/Tutorial-3/17-Tutorial-3.png)
 
 Then, we’ll also add some labels. Go to Labels > Rules based Labeling. Add a rule. For the formula, we’ll add this:  "Spain-Immigration_Migrant_Percent1" >= 0 
-(Same as above). For the Value, we’ll do something special to display the Name and the Number of Migrants. Copy the below into the value tab: 
-"NAME"  || '\nNumber of Migrants: ' ||  "Spain-Immigration_Migrant_Value1"  
-Then continue styling the labels as usual. 
+(Same as above). For the Value, we’ll do something special to display the Name and the Number of Migrants. Copy the below into the value tab, then continue styling as usual. 
+```
+"NAME"  || '\nNumber of Migrants: ' ||  "Spain-Immigration_Migrant_Value1" 
+``` 
 
 ![Image 18](/Mapping-Global-Foodscapes/assets/img/Tutorial-3/18-Tutorial-3.png)
 
