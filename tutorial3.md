@@ -179,12 +179,14 @@ From the Layers Panel, right click the **Centroids layer > Properties > Symbolog
 
 ![Image 17](/Mapping-Global-Foodscapes/assets/img/Tutorial-3/17-Tutorial-3.png)
 
-Then, we’ll also add some labels. Go to Labels > Rules based Labeling. Add a rule. For the formula, we’ll add this:  "Spain-Immigration_Migrant_Percent1" >= 0 
-(Same as above). For the Value, we’ll do something special to display the Name and the Number of Migrants. Copy the below into the value tab, then continue styling as usual. 
+Then, we’ll also add some labels. Go to Labels > Rules based Labeling. Add a rule. For the formula, we’ll add this:  
+``` 
+"Spain-Immigration_Migrant_Percent1" >= 0 
+``` 
+For the Value, we’ll do something special to display the Name and the Number of Migrants. Copy the below into the value tab, then continue styling as usual. 
 ```
 "NAME"  || '\nNumber of Migrants: ' ||  "Spain-Immigration_Migrant_Value1" 
-``` 
-
+```
 ![Image 18](/Mapping-Global-Foodscapes/assets/img/Tutorial-3/18-Tutorial-3.png)
 
 Great. We’re done. Here’s what my map looks like! 
@@ -203,15 +205,17 @@ Let’s take a look, and remove all the columns we don’t need. Right click the
 
 ![Image 21](/Mapping-Global-Foodscapes/assets/img/Tutorial-3/21-Tutorial-3.png)
 
-Now, we’ll do some more edits to ease processing the dataset. QGIS is case sensitive (ie. It differentiates between uppercase and lowercase text). Your ISO 3, the country codes, are in lower case, which will be an issue for the table join. So, let’s convert them to upper case. In cell D2, paste this formula: =UPPER(B2)
+## Editting in Google Sheets
+
+Now, we’ll do some more edits to ease processing the dataset. QGIS is case sensitive (ie. It differentiates between uppercase and lowercase text). Your ISO 3, the country codes, are in lower case, which will be an issue for the table join. So, let’s convert them to upper case. In cell D2, paste this formula:`=UPPER(B2)` 
  
 Now drag to apply it to all the columns. Great. In cell D1, name this column Destination_ISO. Copy the whole column, and right click > Paste Special > Paste values only. Delete all of column B (lower case ISO_3), we don’t need it anymore. 
 
 Note that QGIS doesn’t like to work with spacebars, so avoid them in the attribute headers. Change cell C1 to Trade_Value (replace the space with an underscore). 
 
-Finally, we want to calculate the percentages. In G1, calculate the total of all tomato exports using the following formula, =SUM(B2:B67) 
+Finally, we want to calculate the percentages. In G1, calculate the total of all tomato exports using the following formula, `=SUM(B2:B67)`
 
-Then, in D1, name your attribute Trade_Percent. Then, calculate the percentage by starting from cell D2, using the formula =(B2/1091558740)*100*
+Then, in D1, name your attribute Trade_Percent. Then, calculate the percentage by starting from cell D2, using the formula `=(B2/1091558740)*100`
 Drag down to get all the values. 
 
 Now, go to View > Freeze > 1 row. Then, on Column D (Trade_Percent), click the arrow that pops up on the right, and Sort Sheet Z > A. 
@@ -220,7 +224,7 @@ Take a look at the percentages, and make a decision as to how many of these are 
 
 Lastly, for the flow diagram to work properly, we need to identify the Origin, which in this case is Spain. Add a Column called Origin_ISO, and change all the values to ESP. 
 
-Go to file > Download > Download Comma separated value.
+Go to **file > Download > Download Comma separated value.**
 
 Rename you new .csv Spain_Tomato_Export and put it in the folder for tutorial 3. Now. You’ll do all the same steps from Mapping Flow to make this into another set of flows. I’ll help you with the first steps. 
 
@@ -228,11 +232,11 @@ Rename you new .csv Spain_Tomato_Export and put it in the folder for tutorial 3.
 
 Back to QGIS.
 
-1) Layer > Add Layer > Add Delimited Text Layer, and navigate to your Spain_Tomato_Export file. 
+1) **Layer > Add Layer > Add Delimited Text Layer**, and navigate to your Spain_Tomato_Export file. 
 
-2) Open the Attribute Table, and recalculate the Trade_Value and Trade_Percent using the Open Field Calculator. Then delete the unneeded attributes. 
+2) Open the **Attribute Table**, and recalculate the Trade_Value and Trade_Percent using the Open Field Calculator. Then delete the unneeded attributes. 
 
-3) Layer > Add Layer > Add Virtual Layer. In the Query, add the following. Note that I am changing some things.
+3) **Layer > Add Layer > Add Virtual Layer**. In the Query, add the following. Note that I am changing some things.
 
 ```javascript 
 SELECT Origin_ISO, Destination_ISO, Trade_Percent1,
@@ -247,11 +251,11 @@ JOIN 'Centroids' b ON 'Spain-Immigration'.Destination_ISO = b.ISO_A3
 WHERE a.ISO_A3 != b.ISO_A3
 ```
 
-4) Save your virtual layer as a GeoJSON called Spain_Tomato_Flow 
+4) Save your virtual layer as a **GeoJSON** called Spain_Tomato_Flow 
 
-5) Open the Properties of Spain_Tomato_Flow > Symbology > Load Style. The only thing you’ll need to change is in Arrow > Arrow width, width at start, head length and head thickness, using the Assistant. There, change the source from Migrant_Percent1 to Trade_Percent1.
+5) Open the Properties of **Spain_Tomato_Flow > Symbology > Load Style**. The only thing you’ll need to change is in **Arrow > Arrow width, width at start, head length and head thickness**, using the **Assistant**. There, change the source from Migrant_Percent1 to Trade_Percent1.
 
-You may want to also duplicate the World-Map, Join tables with the tomato, reproduce the centroids, change the symbology and labels, etc. 
+You may want to also duplicate the **World-Map**, **Join tables with the tomato**, reproduce the centroids, change the symbology and labels, etc. 
 
 ![Image 22](/Mapping-Global-Foodscapes/assets/img/Tutorial-3/22-Tutorial-3.png)
 
@@ -260,3 +264,5 @@ The central issue is that there is scalar. Migrants are coming to Spain most fro
 You can use this [Nuclear War Atlas](https://www.leventhalmap.org/digital-exhibitions/bending-lines/why-persuade/1.9.1/) for reference. 
 
 Brainstorm what else you can add? For example, you can try to add the evolution of Almeria, Spain from [Google Earth Timeline](https://earthengine.google.com/timelapse).
+
+You can also explore adding more datasets from [FOASTAT](http://www.fao.org/faostat/en/#data).
