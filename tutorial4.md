@@ -75,8 +75,6 @@ For Value, choose NAME, and change the styling.
 
 8. Duplicate Food-Supply-1961 layer, and change the name to Food-Supply-2017. Now, open properties, and in Symbology and Labels, just change the fields from 1961 to 2017. Be sure not to change the values or the the color classification, so that your maps can be directly compared. 
 
-9. Right click the World Map, and press Zoom To Layers. With only the Food-Supply-2017 layer and the Basemap enabled, go to Project > Export > Export map as Image, and save it. Now go back, and only enable Food-Supply-1961 layer and the Basemap, and repeat the export. 
-
-Now you have exported two separate maps. 
+9. Right click the World Map, and press Zoom To Layers. With only the Food-Supply-2017 layer and the Basemap enabled, go to Project > Export > Export map as Image, and save it. Now go back, and only enable Food-Supply-1961 layer and the Basemap, and repeat the export. Now you have exported two separate maps. 
 
 10. On Google Slides [Tutorial 4 Output](https://docs.google.com/presentation/d/1wQQ1f1jhq3TsfDewPWGO3PUGnwKnoPe2EQ4e_IXtRs4/), add your two maps, and include a title and labels. You can also do this processing in Photoshop or Illustrator. 

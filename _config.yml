@@ -22,3 +22,5 @@ navigation:
     url: tutorial6
   - title: Tutorial 7
     url: tutorial7
+  -title: Resources
+    url: resources
