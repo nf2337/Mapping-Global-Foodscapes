@@ -9,7 +9,7 @@ To learn how to fetch data online, and create a chloropleth map of global calori
 
 ## Setup: 
 
-Download the datasets for Tutorial 4.
+Download the datasets for [Tutorial 4](https://drive.google.com/drive/u/0/folders/1VbTYjmMWf-QU5HSvEjqAw4HZ7svzv69W). 
 
 Open QGIS, and start a new project file. Save it in your designated folder. Remember! Always keep your files well structured. Set your project Coordinate Reference System (from the bottom right corner) to WGS 84 (ESPG:4326).
 
@@ -61,7 +61,7 @@ Head to QGIS. I’ll give brief instructions, but you can refer to [tutorial 3](
 
 7) Open the Properties of the Food-Supply-2017 vector world map. In Labels, chose rule-based labeling. Add a new rule. Open the filter calculator, and type the following, replacing FIELD-NAME with the name of your calorie field, which can be identified from fields and values: 
 ```
-“FIELD-NAME” <= 2500” 
+"FIELD-NAME" <= 2500
 ```
 This means that a name will appear for countries where food supply is less than 2500 kg/person/day. You can also change the 2500 value. 
 
