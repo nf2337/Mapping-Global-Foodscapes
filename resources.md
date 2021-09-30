@@ -26,6 +26,8 @@ The Anti-Evicition Mapping Project, Counterpoints: A San Francisco Bay Area Atla
 
 Kathrine Harmon, YOUR ARE HERE: Personal Geographies and Other Maps of the Imagination (Princeton: Princeton Architectural Press, 2004)
 
+Darrin Jenson and Molly Roy, Food: An Atlas (Guerrila Cartography, 2013)
+
 ## Historical Map Collections and Digital Exhibitions
 
 [Leventhal Map & Education Center at the BPL](https://www.leventhalmap.org/)
@@ -38,9 +40,9 @@ Kathrine Harmon, YOUR ARE HERE: Personal Geographies and Other Maps of the Imagi
 
 ## Blogs
 
-[Radical Cartography](http://www.radicalcartography.net/) Bill Rankin’s Personal Blog] 
-[The Map Room](https://www.maproomblog.com/) [Jonathan Crowe’s Personal Blog] 
-[Shanon Mattern’s Pinboard](https://pinboard.in/u:shannon_mattern/) 
+[Radical Cartography](http://www.radicalcartography.net/), Bill Rankin’s Personal Blog
+[The Map Room](https://www.maproomblog.com/), Jonathan Crowe’s Personal Blog
+[Shanon Mattern’s Pinboard](https://pinboard.in/u:shannon_mattern/), Lots of Links!!
 
 ## Datasets 
 
