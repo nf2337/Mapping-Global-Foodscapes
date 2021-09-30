@@ -41,7 +41,9 @@ Darrin Jenson and Molly Roy, Food: An Atlas (Guerrila Cartography, 2013)
 ## Blogs
 
 [Radical Cartography](http://www.radicalcartography.net/), Bill Rankin’s Personal Blog
+
 [The Map Room](https://www.maproomblog.com/), Jonathan Crowe’s Personal Blog
+
 [Shanon Mattern’s Pinboard](https://pinboard.in/u:shannon_mattern/), Lots of Links!!
 
 ## Datasets 
