@@ -2,9 +2,9 @@
 -------------------------
 ## Projects, Collectives, Artists:  
 
-[Anti-Evicition Mapping Project](https://antievictionmap.com/) 
+[Anti-Evicition Mapping Project](https://antievictionmap.com/), espcially [NYC's Worst Evictions](https://www.worstevictorsnyc.org/)
 
-[Iconoclasistas](https://iconoclasistas.net/) 
+[Iconoclasistas](https://iconoclasistas.net/), especially [Who Owns the Land?](https://iconoclasistas.net/portfolio-item/mapamundi-2019-esp-ing/)
 
 [Forensic Architecture](https://forensic-architecture.org), especially [Ecocide in Indonesia](https://forensic-architecture.org/investigation/ecocide-in-indonesia)
 
@@ -29,8 +29,11 @@ Kathrine Harmon, YOUR ARE HERE: Personal Geographies and Other Maps of the Imagi
 ## Historical Map Collections and Digital Exhibitions
 
 [Leventhal Map & Education Center at the BPL](https://www.leventhalmap.org/)
+
 [David Rumsey Historical Map Collection](https://www.davidrumsey.com/)
+
 [Bending Lines: Maps and Data from Distortion to Deception](https://www.leventhalmap.org/digital-exhibitions/bending-lines/)
+
 [A Fine and Fertile Country: How America Mapped Its Meals](https://harvard-cga.maps.arcgis.com/apps/MapJournal/index.html?appid=761cc8613d0f40db8022d8e4218fff58)
 
 ## Blogs
