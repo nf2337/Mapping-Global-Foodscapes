@@ -1,6 +1,6 @@
 # Resources
 -------------------------
-## Projects, Collectives, Artists:  
+## Projects, Collectives, Artists
 
 [Anti-Evicition Mapping Project](https://antievictionmap.com/), espcially [NYC's Worst Evictions](https://www.worstevictorsnyc.org/)
 
