@@ -13,7 +13,7 @@ On your iPhone, go to the apple store, and download the iNaturalist App.
 
 Then, open the app and create an account with your Bard email address. 
 
-Finally, open the app and search for `Natural History of Bard College`. Join the app, and now youre ready for collection. 
+Finally, open the project page on the app and search for `Natural History of Bard College`. Join the project, and now you are ready for collection. 
 
 ![Image 1](/Mapping-Global-Foodscapes/assets/img/Tutorial-5/1-Tutorial-5.png)
 
