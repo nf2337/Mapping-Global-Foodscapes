@@ -53,6 +53,8 @@ Scroll down to **4 - Create Export**, and click the button. Once the export is c
 
 Rename the file **Tutorial-5-iNatralist** and store it in your folder for Tutorial 5. 
 
+*note: if you were not able to create an iNaturalist account, you can download the data from [here](https://drive.google.com/file/d/1wuUxzzEbzuGDgrkLOI4enhpxn9XWbQn_/view).*
+
 ## Adding iNaturalist data in QGIS
 
 Open QGIS. Before we start, lets note that the maps we made for tutorials 1-4 were all global in scale, in other words, we were mapping the whole world, and using coordinate reference system that is appropriate for such a large landmass. 
@@ -224,9 +226,6 @@ Finally, a quick export. Project > Import/Export > Export Map as Image. Make sur
 ![Image 33](/Mapping-Global-Foodscapes/assets/img/Tutorial-5/33-Tutorial-5.png)
 
 Please upload your outcome to [Tutorial 5 Folder](https://drive.google.com/drive/u/0/folders/1wE5ENChPJbWfD-eIhNw_rPChwcRup7rk). 
-
-
-
 
 
 
