@@ -53,7 +53,7 @@ Scroll down to **4 - Create Export**, and click the button. Once the export is c
 
 Rename the file **Tutorial-5-iNatralist** and store it in your folder for Tutorial 5. 
 
-*note: if you were not able to create an iNaturalist account, you can download the data from [here](https://drive.google.com/file/d/1wuUxzzEbzuGDgrkLOI4enhpxn9XWbQn_/view).*
+*note: if you were not able to create an iNaturalist account, you can download the data from [here](https://drive.google.com/file/d/1wuUxzzEbzuGDgrkLOI4enhpxn9XWbQn_/view).* 
 
 ## Adding iNaturalist data in QGIS
 
