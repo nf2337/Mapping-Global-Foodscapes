@@ -1,11 +1,11 @@
 # Tutorial 6
 -------------------------
 
-## Tutorial 6: Scraping Online Datasets
+## Tutorial 6: Scraping Online Data Sources
 
 ## Objectives: 
 
-The objectives of this tutorial will be to gather data on NYC restaurants from online sources. We'll be making a map of falafel sandwiches in New York City based on information collated from online review networks, ordering sites, and menus. We will collectively compile a spreadsheet of data as a class, and each person will work on visualizing it in their own style. 
+The objectives of this tutorial will be to scrape data from online sources. There's an abundance of crowdsourced, collated, and categorized information on the internet. By scraping it, we'll be arranging it in a format that can be useful for mapmakers using GIS. We'll be making a map of falafel sandwiches in New York City based on information collated from online review networks, ordering sites, and menus. We will collectively compile a spreadsheet of data as a class, and each person will work on visualizing it in their own style. 
 
 ## Collecting online data about the Falafel Sandwich
 
@@ -67,7 +67,7 @@ We'll return to use the **Layout Editor** in QGIS, because we want to add a lege
 
 Go to Project > New Print Layout, and call it Tutorial 6. 
 
-Add the map using the Add Map button on the left hand side, then change the scale of the map and the Map Properties panel on the right and the Move item cotent button on the left. 
+Add the map using the **Add Map** button on the left hand side, then change the scale of the map and the **Map Properties** panel on the right and the **Move Item Cotent** button on the left. 
 
 ![Image 5](/Mapping-Global-Foodscapes/assets/img/Tutorial-6/5-Tutorial-6.png)
 
