@@ -23,7 +23,7 @@ Here's the page for Mamoun's Falafel. At the top, you'll find the tags used to d
 
 Copy the address. Make sure that it's in the following form (this is important for **georeferencing**):
 ```
-Number, Street, New York City, NY ZIP
+Number Street, New York City, NY ZIP
 ```
 Then, click on the webisite or menu, and explore it a little. Read about how the restaurant advertizes itself, noting how it engages with questions of gustatory identity and flavor. What demographic or class does it appear to speak to? Who is the target clientelle? What cultural elements can you identify from the design, images, and text? 
 
