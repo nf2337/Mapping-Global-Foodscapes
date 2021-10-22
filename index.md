@@ -22,7 +22,7 @@ Please follow the steps patiently and diligently so you don't run into any error
 
 ### [Tutorial 5](https://nf2337.github.io/Mapping-Global-Foodscapes/tutorial5) / Using Data Collection Apps
 
-### [Tutorial 6](https://nf2337.github.io/Mapping-Global-Foodscapes/tutorial6) / Visualizing the US Census (Optional)
+### [Tutorial 6](https://nf2337.github.io/Mapping-Global-Foodscapes/tutorial6) / Scraping Online Data Sources
 
 ### [Tutorial 7](https://nf2337.github.io/Mapping-Global-Foodscapes/tutorial7) / Collect your own Data (Optional)
 
