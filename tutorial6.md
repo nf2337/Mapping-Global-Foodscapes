@@ -27,13 +27,13 @@ Number Street, New York City, NY ZIP
 ```
 Then, click on the webisite or menu, and explore it a little. Read about how the restaurant advertizes itself, noting how it engages with questions of gustatory identity and flavor. What demographic or class does it appear to speak to? Who is the target clientelle? What cultural elements can you identify from the design, images, and text? 
 
-Please complete this by Monday, 25th. We'll need all the class entries to work on our map. Once all the entries all filled out, go to File > Download > Comma-seperated values. Store the .csv sheet in your Tutorial 6 folder. 
+Please complete this by Monday, 25th. We'll need all the class entries to work on our map. Once all the entries all filled out, go to **File > Download > Comma-seperated values**. Store the .csv sheet in your Tutorial 6 folder. 
 
 ## Visualizing the Falafel Sandwich on a map of NYC 
 
 Open QGIS, and set your project Coordinate Reference System to WGS 84 Pseudo-Mercator (EPSG:3857). This is a useful projection for making local maps at the scale of New York City. 
 
-Next, let's add a basemap. Go to Web > OpenLayers plugin > OpenStreetMap > OpenStreetMap. Make sure the basemap is added in your **Layers Panel**. 
+Next, let's add a basemap. Go to **Web > OpenLayers plugin > OpenStreetMap > OpenStreetMap**. Make sure the basemap is added in your **Layers Panel**. 
 
 In previous tutorials, we worked .csv sheets in a number of ways to make point and polygon visualizations. Recall in tutorial 2, we visualized the cities based on their latitude and longitude coordinates, attributes that place location based on the Global Positioning System (GPS). Further recall in tutorial 4, we visualized a tabular dataset of average calorie intake by using the table join method. In this tutorial, we are working with tabular data that contains the address of restuarants selling falafel sandwiches in NYC. QGIS can automatically georeference addresses as points on a map, we just need to quickly install a plugin. 
 
@@ -41,21 +41,21 @@ In previous tutorials, we worked .csv sheets in a number of ways to make point a
 
 Go to Plugins > Manage and Install Plugins. Search for **MMQGIS** and install it. 
 
+Next, let's add your .csv file of Falafel sandwich shops. Go to **MMQGIS > Geocode > Geocode CSV with Web Service**. Open the path to your .csv file. Under Address, note the address field. For Web Service, choose OpenStreetMap / Nominatom, and click apply. 
+
 ![Image 3](/Mapping-Global-Foodscapes/assets/img/Tutorial-6/3-Tutorial-6.png)
 
-Next, let's add your .csv file of Falafel sandwich shops. Go to MMQGIS > Geocode > Geocode CSV with Web Service. Open the path to your .csv file. Under Address, note the address field. For Web Service, choose OpenStreetMap / Nominatom, and click apply. 
+Now you have all the restaurants as points on your map. This is what it should look like. Note that your points are in a temporary file. To save it, right click temp in the Layers Panel > Export > Export features as, and save it as geoJSON in your Tutorial 6 folder. 
 
 ![Image 4](/Mapping-Global-Foodscapes/assets/img/Tutorial-6/4-Tutorial-6.png)
-
-Now you have all the restaurants as points on your map. This is what it should look like. Note that your points are in a temporary file. To save it, right click temp in the Layers Panel > Export > Export features as, and save it as geoJSON in your Tutorial 6 folder. 
 
 ## Categorizing Falafel Shops in New York City 
 
 Now, it's your chance to make a map that communicates a message. You may want to categorize your falafel shops based on what cuisine they fall under, whether they are fast food or sit down restaurants, or based on price. 
 
-You can do all this in Properties > Symbology. You may also chose to add labels to your restaurants, from Properties > Labels. 
+You can do all this in **Properties > Symbology**. You may also chose to add labels to your restaurants, from **Properties > Labels**. 
 
-Hint: If you want to add a label that includes the name of the restaurant, and the price of the sandwich, you can use the following expression for the **value** of your label: 
+**Hint:** If you want to add a label that includes the name of the restaurant, and the price of the sandwich, you can use the following expression for the **value** of your label: 
 
 ```
 "Restuarant"  || '\n$' ||  "Price" 
@@ -73,13 +73,13 @@ Add the map using the **Add Map** button on the left hand side, then change the 
 
 Then, add the legend using the add legend tool on the left. 
 
-You can change the legend properties from the Item properties panel. Unclick the auto update function, and then double click each item to change its name. You may also remove the basemap from the legend. 
+You can change the legend properties from the **Item properties panel**. Unclick the auto update function, and then double click each item to change its name. You may also remove the basemap from the legend. 
 
 Finally, edit the fonts, and make the background slightly opaque, and make any stylistic changes. 
 
 ![Image 6](/Mapping-Global-Foodscapes/assets/img/Tutorial-6/6-Tutorial-6.png)
 
-Once you are done, go to Layout > Export as Image. Save your map, and upload it to the [Tutorial 6 folder](https://drive.google.com/drive/u/0/folders/1xPe0Bdca06R02FTqnUnBSivohygAKkNs).
+Once you are done, go to **Layout > Export as Image**. Save your map, and upload it to the [Tutorial 6 folder](https://drive.google.com/drive/u/0/folders/1xPe0Bdca06R02FTqnUnBSivohygAKkNs).
 
 
 
