@@ -24,6 +24,6 @@ Please follow the steps patiently and diligently so you don't run into any error
 
 ### [Tutorial 6](https://nf2337.github.io/Mapping-Global-Foodscapes/tutorial6) / Scraping Online Data Sources
 
-### [Tutorial 7](https://nf2337.github.io/Mapping-Global-Foodscapes/tutorial7) / Collect your own Data (Optional)
+### [Tutorial 7](https://nf2337.github.io/Mapping-Global-Foodscapes/tutorial7) / Mapping Census Data (Optional)
 
 ### [Critical Cartography Resources](https://nf2337.github.io/Mapping-Global-Foodscapes/resources) / Sample Projects, datasets and guides
