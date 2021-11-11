@@ -59,7 +59,7 @@ Finally, just scroll down, and download the **Census Tract data (CSV)**. Move yo
 
 ## Accessing Census Data in QGIS 
 
-To access census data CSV in QGIS, you will need to download a **Shapefile** comprised of Census Tracts polygons for QGIS. This can be found on the (NYC Open Data website)[https://www1.nyc.gov/site/planning/data-maps/open-data/census-download-metadata.page]. Download the first **2020 Census Tracts (Clipped to Shoreline)**. Save it in your Tutorial 7 Folder. 
+To access census data CSV in QGIS, you will need to download a **Shapefile** comprised of Census Tracts polygons for QGIS. This can be found on the [NYC Open Data website](https://www1.nyc.gov/site/planning/data-maps/open-data/census-download-metadata.page). Download the first **2020 Census Tracts (Clipped to Shoreline)**. Save it in your Tutorial 7 Folder. 
 
 Now open QGIS, and start a Tutorial 7 folder. Add the Census Tracts (Layer > Add Layer > Add Vector Layer). Click ok when your prompted with the transformation notice. 
 
