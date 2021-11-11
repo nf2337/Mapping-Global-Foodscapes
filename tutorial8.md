@@ -13,12 +13,12 @@ The ojectives of this tutorial is to use the **Google Static Maps API** to gener
 
 Satellite grids are visually powerful ways to communicate ideas about the physical features of the world as seen by Satellites, and to comparatively play with a sense of scale. The following tool is used to make a diverse array of projects and cartographic interventions. Some projects you might want to explore for inspiration include:  
 
-Center for Spatial Research's [In Plain Site](https://c4sr.columbia.edu/projects/plain-sight)
-Josh Begley's [Best of Luck with the Wall](https://vimeo.com/189004719)
-Eames Office's [Power of Ten](https://www.youtube.com/watch?v=0fKBhvDjuy0)
-Tricontinnental's map of US Military Bases in Africa: 
+Center for Spatial Research's [In Plain Site](https://c4sr.columbia.edu/projects/plain-sight),
+Josh Begley's [Best of Luck with the Wall](https://vimeo.com/189004719),
+Eames Office's [Power of Ten](https://www.youtube.com/watch?v=0fKBhvDjuy0), 
+and Tricontinnental's map of US Military Bases in Africa below:
 
-![Image 1](/Mapping-Global-Foodscapes/assets/img/Tutorial-8/1-Tutorial-8.png)
+![Image 1](/Mapping-Global-Foodscapes/assets/img/Tutorial-8/1-Tutorial-8.jpeg)
 
 In this tutorial, I'll use satellite grids to make a map of supermarkets and farmers markets in Ulster and Dutchess Counties, NY. 
 
