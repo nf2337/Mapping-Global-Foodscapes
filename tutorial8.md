@@ -114,8 +114,8 @@ Lastly, copy and paste the below in the third block.
 Before you click **play**, you'll need to change:
 - "uploaded_filename": change this to  the name of the CSV file you uploaded in the first block. 
 - The second string of numbers is my Google Maps API Access Key, which you don't need to worry about. 
-- The third number, 18, is the zoom scale. This is a standardized number that shows the extent of your satellite square's coverage. You can explore more about zoom scales [here](https://wiki.openstreetmap.org/wiki/Zoom_levels). A zoom scale of 1 will show you the whole world, a zoom scale of 13 will capture roughly a village, and scale of 18 will cover some buildings or trees. You want to change this number depending on what you are trying to capture. 
-- The fourth number, 640, is the pixel resolution of your square grid. 640 is the maximum. 
+- "18" is the zoom scale. This is a standardized number that shows the extent of your satellite square's coverage. You can explore more about zoom scales [here](https://wiki.openstreetmap.org/wiki/Zoom_levels). A zoom scale of 1 will show you the whole world, a zoom scale of 13 will capture roughly a village, and scale of 18 will cover some buildings or trees. You want to change this number depending on what you are trying to capture. 
+- "640" is the pixel resolution of your square grid. 640 is the maximum. 
 
 After making your edits, run the third block, and your images will start to download. Note: you might need to enable your browser to download multiple images in one hit. 
 
